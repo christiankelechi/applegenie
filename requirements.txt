@@ -19,7 +19,7 @@ pyOpenSSL
 rave-python
 python-decouple
 resend
-psycopg2
+psycopg2-binary
 django-environ
 dj-rest-auth
 django-allauth
