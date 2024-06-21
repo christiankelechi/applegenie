@@ -1,19 +1,32 @@
 from django.db import models
-
+from core_app_root.security.user.models import User
 # Create your models here.
 class HumanQualities(models.Model):
-    # skin_color_types=(("G":"Gray","W":"White","B":"Black"))
-    skin_color=models.CharField(null=True,blank=True,max_length=500)
-    # body_size = ((
-    #     "S": "Small",
-    #     "M": "Medium",
-    #     "H": "Huge",
-    # ))
-    body_size = models.CharField(max_length=200)
-    # list_of_hobbies=(("SING","Singing","DANCE""DANCING","COOK":"COOKING"))
+    user=models.ForeignKey(User,on_delete=models.CASCADE,blank=True,null=True)
+    age=models.IntegerField(default=18)
     
-    hobbies=models.CharField(max_length=100)
+    country=models.CharField(max_length=10000,null=True,blank=True)
+
     
-    is_hot_tempered=models.BooleanField(default=False)
+
+class HumanInterests(models.Model):
+    user=models.ForeignKey(User,on_delete=models.CASCADE,blank=True,null=True)
+    nature=models.BooleanField(default=False)
+    travel=models.BooleanField(default=False)
+    writing=models.BooleanField(default=False)
+    people=models.BooleanField(default=False)
+    gym_and_fitness=models.BooleanField(default=False)
+    language=models.BooleanField(default=False)
+    photography=models.BooleanField(default=False)
+    
+    class Meta:
+        verbose_name_plural='HumanInterests'
+    
+    
+    
+    
+    
+    
+    
     
     

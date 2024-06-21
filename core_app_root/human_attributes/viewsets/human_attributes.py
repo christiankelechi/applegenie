@@ -11,7 +11,13 @@ class HumanAttributesViewset(viewsets.ModelViewSet):
     queryset=models.AppleGiftingModel.objects.all()
     permission_classes=[AllowAny]
     def create(self,request):
-        context={"message":"Select Human Attributes"}
-        return Response(context,status=status.HTTP_200_OK)
+        serializer=self.serializer_class(data=request.data)
+        if serializer.is_valid():
+            context={"message":"Human Attributes Stored for this User","status":True,"data":serializer.data}
+            return Response(context,status=status.HTTP_200_OK)
+        else:
+            context={"message":"Human Attributes could not be Stored for this User","status":False,"data":""}
+            
+            return Response(context,status=status.HTTP_406_NOT_ACCEPTABLE)
     
     

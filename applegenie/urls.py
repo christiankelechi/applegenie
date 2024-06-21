@@ -40,8 +40,15 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('swagger<format>/', schema_view.without_ui(cache_timeout=0), name='schema-json'),
     path('api/docs/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
-    path('',include(('core_app_root.apple_gifting.routers','core_app_root.apple_gifting'))),
+    # path('',include(('core_app_root.apple_gifting.routers','core_app_root.apple_gifting'))),
+    path('',include(('core_app_root.security.auth.routers','core_app_root.security.auth'))),
+    path('',include(('core_app_root.security.user.routers','core_app_root.security.user'))),
+    
+    
     path('',include(('core_app_root.human_attributes.routers','core_app_root.human_attributes'))),
+    path('',include(('core_app_root.match_friends.routers','core_app_root.match_friends'))),
+    path('',include(('core_app_root.chat_management.routers','core_app_root.chat_management'))),
+    
     
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
 ]

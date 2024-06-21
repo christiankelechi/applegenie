@@ -49,6 +49,11 @@ INSTALLED_APPS = [
     "rest_framework_simplejwt",
     "drf_yasg",
     "dj_rest_auth",
+    "core_app_root.match_friends",
+    "core_app_root.security",
+    "core_app_root.security.user",
+    "core_app_root.security.auth"
+   
     
     
 ]
@@ -83,6 +88,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "applegenie.wsgi.application"
 
+AUTH_USER_MODEL="core_app_root_security_user.User"
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
@@ -141,7 +147,7 @@ STATIC_ROOT=os.path.join(BASE_DIR,'static')
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
-    'rest_framework.permissions.IsAuthenticated',
+    'rest_framework.permissions.AllowAny',
     ),
     'DEFAULT_AUTHENTICATION_CLASSES': (
     'rest_framework_simplejwt.authentication.JWTAuthentication',

@@ -4,3 +4,8 @@ class HumanAttributesSerializer(serializers.ModelSerializer):
     class Meta:
         fields="__all__"
         model=models.HumanQualities
+
+class HumanInterestSerializer(serializers.ModelSerializer):
+    class Meta:
+        fields="__all__"
+        model=models.HumanInterests
