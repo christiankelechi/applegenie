@@ -1,0 +1,5 @@
+Apple Genie Overview
+
+The Apple Genie is an AI feature on AppleMatch designed to enhance user interactions by providing compatibility insights. When two users match and are both online, an Apple Genie icon appears in the chat window. Clicking this icon launches a three-way interaction involving the male, the female, and the Apple Genie.
+
+The Apple Genie first provides a synopsis of the male's background or profile, followed by a synopsis of the female's background or profile. Finally, it offers an analysis of their compatibility. After this, the Apple Genie invites users to ask questions, which it can answer to help them get to know each other better. This feature is intended to make the matching process more interactive and personalized.

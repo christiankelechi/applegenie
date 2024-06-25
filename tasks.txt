@@ -1,0 +1,176 @@
+
+
+Scope OF Work (SOW) 
+Description for Software Engineers to Develop AppleMatch App
+Project Overview:
+AppleMatch is a unique dating app where users express interest by gifting apples to each other. The app features a gamified interaction system where users have 3 days to accept or reject apples, leading to various engagement and matching outcomes. We need to develop AppleMatch for both the Apple App Store and Google Play Store.
+Key Features:
+
+1. User Registration and Profiles:
+   - User Registration: Sign up via email, phone number, or social media accounts.
+   - Profile Creation: Add photos, bio, interests, and preferences.
+   - Profile Customization: Advanced options for subscribed users, including exclusive themes and badges.
+2. Apple Gifting System:
+   - Apple Inventory: Users start with a bucket of 100 apples.
+   - Gifting Apples: Ability to send apples to potential matches with optional messages.
+   - Acceptance Window: Receivers have 3 days to accept or reject apples.
+   - Rotting Mechanism: Unaccepted apples return to the sender after 3 days.
+3. Trial Period for New Users:
+   - Profile Completion Requirement:
+     - Implement a progress bar showing the percentage of profile completion.
+     - Users must complete more than 90% of their profile to unlock trial apples.
+   
+
+- Trial Apples:
+     - New users receive 10 trial apples upon completing more than 90% of their profile.
+     - Set a rotting period of 3 days for the trial apples.
+- Notification:
+     - Display a notification when users unlock their trial apples.
+     - Example: “Congratulations! You’ve completed 90% of your profile and earned 10 trial apples. Use them within 3 days before they rot!”
+- Visual Indicator:
+     - Show a countdown timer or expiration date on the trial apples to indicate when they will rot.
+4. Subscription Tiers:
+   - Basic Apple Pack: $9.99/month – 100 apples, basic profile customization, see who accepted apples.
+   - Premium Apple Pack: $19.99/month – 200 apples, priority visibility, advanced filters, access to "Golden Apples".
+   - Platinum Apple Pack: $29.99/month – 300 apples, personalized match suggestions, enhanced profile customization, direct messaging.
+5. Matching and Interaction:
+   - Match Suggestions: Algorithm-based suggestions and priority matches for subscribers.
+   - Messaging: Free messaging post-acceptance, direct messaging for premium users.
+   - Activity Feed: Overview of recent interactions, new messages, and match suggestions.
+6. Search and Filters:
+   - Basic Search: Location and basic criteria.
+   - Advanced Filters: Detailed search options for premium users.
+7. Notifications:
+   - Real-Time Alerts: For apple acceptance, messages, and new matches.
+   - Customizable Settings: Users can adjust notification preferences.
+8. User Interface:
+   - Home Screen: Personalized greeting, apple count, quick actions, interaction overview.
+   - Match List: Enhanced filters, priority visibility for premium users.
+   - Profile Customization: Advanced options and exclusive themes for subscribers.
+
+9. Security and Privacy:
+   - Data Encryption: Secure user data with end-to-end encryption.
+   - Privacy Settings: Allow users to control visibility and interactions.
+
+Monitoring and Analytics:
+1. Usage Tracking:
+   - Implement tracking to monitor the usage of trial apples and regular apples.
+   - Collect data on user engagement, such as how quickly trial apples are used, acceptance rates, and interaction patterns.
+2. Conversion Metrics:
+   - Track the conversion rate of users from free to paid subscriptions.
+   - Analyze the effectiveness of trial apples in driving conversions.
+3. User Feedback:
+   - Implement mechanisms for collecting user feedback on the trial apple feature and overall app experience.
+   - Regularly review feedback to identify areas for improvement.
+
+Maintenance and Support:
+1. Post-Launch Support:
+   - Provide ongoing support to address any issues or bugs reported by users.
+   - Offer regular updates to enhance app performance and introduce new features.
+2. Feature Enhancements:
+   - Continuously improve the app based on user feedback and market trends.
+   - Plan and implement new features to keep the app competitive and engaging.
+
+
+
+
+
+Project Management:
+1. Project Management Tools:
+   - Utilize tools like Jira or Trello for task management, progress tracking, and collaboration.
+2. Regular Updates:
+   - Conduct weekly meetings to discuss progress, address any issues, and plan next steps.
+   - Provide regular progress reports to stakeholders.
+3. Risk Management:
+   - Identify potential risks to the project and develop mitigation strategies.
+   - Regularly review and update the risk management plan as needed.
+
+Quality Assurance:
+1. Comprehensive Testing:
+   - Perform thorough testing across multiple devices and operating systems to ensure compatibility and performance.
+   - Conduct user acceptance testing (UAT) to validate the app’s functionality and user experience.
+2. Bug Tracking:
+   - Implement a system for tracking and resolving bugs.
+   - Prioritize
+
+Approval and Sign-Off:
+
+By signing below, both parties agree to the terms and conditions outlined in this Statement of Work, including project scope, timeline, deliverables, and responsibilities.
+
+Client Representative:
+Signature: ___________________________
+Name: ______________________________
+Title: _______________________________
+Date: _______________________________
+Appendices:
+
+1. Detailed Feature Specifications:
+   - User Registration and Profiles:
+oDetailed fields and requirements for profile completion.
+oDesign mockups for registration and profile screens.
+   - Apple Gifting System:
+oWorkflow diagrams for gifting, acceptance, and rotting mechanisms.
+oSample UI elements for apple inventory and gifting process.
+   - Subscription Tiers:
+oFeature comparison table for Basic, Premium, and Platinum Apple Packs.
+oPricing structure and payment gateway integration details.
+
+2. Technical Architecture:
+   - Backend Architecture:
+oDatabase schema and API endpoints.
+oServer infrastructure and scalability considerations.
+   - Frontend Architecture:
+oFrameworks and libraries to be used (e.g., React Native).
+oUI/UX design principles and guidelines.
+
+3. Testing Plan:
+   - Testing Frameworks:
+oTools and methodologies for automated and manual testing.
+oTest case examples and expected outcomes.
+   - QA Process:
+oSteps for user acceptance testing (UAT) and bug tracking.
+oPerformance testing and optimization strategies.
+
+
+
+4. Deployment Plan:
+   - App Store Submission:
+oChecklist for compliance with Apple App Store and Google Play Store guidelines.
+oSteps for submission, review, and approval process.
+   - Post-Launch Support:
+oMaintenance schedule and update frequency.
+oUser feedback integration and continuous improvement plan.
+
+Glossary:
+- Trial Apples: Special apples given to new users that expire after a certain period, used to introduce users to the app’s features.
+- Rotting Mechanism: A feature where unaccepted apples return to the sender after a specified period.
+- Subscription Tiers: Different levels of paid subscriptions offering various features and benefits.
+- User Acceptance Testing (UAT): A phase in software development where the end users validate the functionality and usability of the app.
+
+Revision History:
+- Version 1.0:
+  - Initial draft created on [Date].
+  - Includes primary features and technical requirements.
+- Version 1.1:
+  - Updated with trial period integration details.
+  - Adjusted timeline and milestones.
+- Version 1.2:
+  - Final review and approval section added.
+  - Minor edits and clarifications based on stakeholder feedback.
+
+
+
+
+Contact Information:
+For any questions or further clarifications regarding this SOW, please contact:
+Client Contact:
+Name: ______________________________
+Email: _______________________________
+Phone: _______________________________
+---
+Developer Contact:
+Name: ______________________________
+Email: _______________________________
+Phone: _______________________________
+---
+This detailed Statement of Work provides a comprehensive roadmap for developing the AppleMatch app, ensuring all parties are aligned on expectations, deliverables, and responsibilities.

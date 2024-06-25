@@ -1,0 +1,4 @@
+venv
+flash-attention
+scripts
+scripts/qa_model_with_context.pth 
