@@ -46,5 +46,13 @@ class MatchFriendsViewsets(viewsets.ModelViewSet):
         return Response({"status":True},status=status.HTTP_200_OK)
         
         
-        
-        
+class AskQuestionsToMatchViewsets(viewsets.ModelViewSet):
+    http_method_names=['post','get'] 
+    serializer_class=match_friends.AskQuestionsToMatchSerializer
+    
+    def create(self,request):
+        serializer=self.serializer_class(data=request.data) 
+        if serializer.is_valid():
+            
+            return Response({"status":True})     
+# 

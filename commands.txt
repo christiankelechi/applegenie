@@ -3,3 +3,75 @@ sudo systemctl restart nginx
 sudo service gunicorn restart
 
 sudo service nginx restart
+sudo add-apt-repository ppa:graphics-drivers/ppa
+wget https://developer.download.nvidia.com/compute/cuda/11.7.0/local_installers/cuda_11.7.0_515.43.04_linux.run
+
+sudo apt install nvidia-cuda-toolkit gcc-6
+
+nvcc --version
+
+
+
+UbuntuUbuntu Based
+How To Install CUDA on Ubuntu 24.04 LTS
+r00t
+Install CUDA on Ubuntu 24.04
+
+In this tutorial, we will show you how to install CUDA on Ubuntu 24.04 LTS. CUDA is NVIDIA’s parallel computing architecture that enables dramatic increases in computing performance by harnessing the power of the GPU (Graphics Processing Unit). Unlike traditional computing, which relies on the CPU, CUDA allows for complex calculations to be divided and executed simultaneously across multiple cores of a GPU, making it an invaluable tool for applications requiring high levels of mathematical computations, such as machine learning models, 3D rendering, and scientific simulations.
+
+This article assumes you have at least basic knowledge of Linux, know how to use the shell, and most importantly, you host your site on your own VPS. The installation is quite simple and assumes you are running in the root account, if not you may need to add ‘sudo‘ to the commands to get root privileges. I will show you the step-by-step installation of NVIDIA CUDA on Ubuntu 24.04 (Noble Numbat). You can follow the same instructions for Ubuntu 22.04 and any other Debian-based distribution like Linux Mint, Elementary OS, Pop!_OS, and more as well.
+
+
+Prerequisites
+
+A server running one of the following operating systems: Ubuntu and any other Debian-based distribution like Linux Mint.
+It’s recommended that you use a fresh OS install to prevent any potential issues.
+SSH access to the server (or just open Terminal if you’re on a desktop).
+An active internet connection. You’ll need an internet connection to download the necessary packages and dependencies.
+An Ubuntu 24.04 system with root access or a user with sudo privileges.
+Install CUDA on Ubuntu 24.04 LTS Noble Numbat
+Step 1. Updating the Package Repository.
+
+It’s crucial to keep your system up-to-date to avoid potential compatibility issues and security vulnerabilities. Open your terminal and run the following commands to update the package lists and upgrade installed packages:
+
+sudo apt update
+This command will fetch the latest package information from the Ubuntu repositories, allowing you to install the most recent version of CUDA and its dependencies. Updating the package repository is crucial to maintaining the security and stability of your system.
+
+Step 2. Installing NVIDIA Drivers.
+
+Identifying and installing the correct NVIDIA drivers is crucial. You can install the recommended driver using the ubuntu-drivers utility:
+
+sudo ubuntu-drivers autoinstall
+Reboot your system to apply changes:
+
+sudo reboot
+Step 3. Installing NVIDIA CUDA on Ubuntu 24.04.
+
+The CUDA Toolkit is the core component required for CUDA development. You can download the latest version of the CUDA Toolkit from the NVIDIA website.​
+
+
+wget https://developer.download.nvidia.com/compute/cuda/12.4.1/local_installers/cuda_12.4.1_550.54.15_linux.run
+Once the download is complete, navigate to the downloaded file’s location in the terminal and run the following commands to install the CUDA Toolkit:
+
+sudo sh cuda_12.4.1_550.54.15_linux.run
+Follow the on-screen prompts and accept the license agreement. When prompted, choose the option to install the CUDA Toolkit and associated components.
+
+After the installation is complete, you’ll need to set the necessary environment variables. Open your .bashrc file using a text editor:
+
+nano ~/.bashrc
+Add the following lines at the end of the file, replacing <cuda_install_path> with the actual installation path of CUDA:
+
+export PATH=$PATH:<cuda_install_path>/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:<cuda_install_path>/lib64
+Save the changes and exit the text editor. Then, source the .bashrc file to apply the changes:
+
+source ~/.bashrc
+To ensure that CUDA is installed correctly, you can run the following command:
+
+nvidia-smi
+This command will display information about your NVIDIA GPU and the installed CUDA version. If the output shows your GPU and CUDA version, the installation was successful.
+
+
+Step 4. Testing the Installation
+
+To further validate the installation, you can compile and run a simple CUDA program. NVIDIA provides sample codes in the CUDA Toolkit installation directory. Navigate to the samples directory and compile the deviceQuery sample:

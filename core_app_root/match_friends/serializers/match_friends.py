@@ -7,3 +7,8 @@ class MatchFriendsSerializers(serializers.ModelSerializer):
     class Meta:
         fields="__all__"
         model=models.UserAttributes
+
+class AskQuestionsToMatchSerializer(serializers.ModelSerializer):
+    class Meta:
+        fields="__all__"
+        model=models.AskQuestionsToMatchModel

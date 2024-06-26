@@ -16,6 +16,13 @@ class UserAttributes(models.Model):
     
     country=models.CharField(max_length=10000,null=True,blank=True)
     
+class AskQuestionsToMatchModel(models.Model):
+    prompt_in=models.TextField()
+    prompt_out=models.TextField()
+    
+    def __str__(self):
+        return f" Answered your question  on {self.prompt_in}"
+    
     
 
     
