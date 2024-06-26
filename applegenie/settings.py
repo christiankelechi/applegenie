@@ -26,8 +26,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-3jnun&6pm_(9$icu*1wpeg7sy#w*v$fh=ktr3krcy76z!cl-0k"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-# DEBUG = False
+# DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*','16.16.128.140']
 
@@ -53,20 +53,24 @@ INSTALLED_APPS = [
     "core_app_root.match_friends",
     "core_app_root.security",
     "core_app_root.security.user",
-    "core_app_root.security.auth"
+    "core_app_root.security.auth",
+    
    
     
     
 ]
 
 MIDDLEWARE = [
-    "django.middleware.security.SecurityMiddleware",
-    "django.contrib.sessions.middleware.SessionMiddleware",
-    "django.middleware.common.CommonMiddleware",
-    "django.middleware.csrf.CsrfViewMiddleware",
-    "django.contrib.auth.middleware.AuthenticationMiddleware",
-    "django.contrib.messages.middleware.MessageMiddleware",
-    "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    'django.middleware.security.SecurityMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+  
 ]
 
 ROOT_URLCONF = "applegenie.urls"
@@ -190,5 +194,5 @@ CORS_ALLOW_ALL_ORIGINS = True
 #     'http://localhost:8000'
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend" # new
 SITE_ID = 1 
-
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
