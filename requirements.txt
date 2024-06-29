@@ -171,3 +171,5 @@ urllib3==2.2.1
 vpython==7.6.5
 wcwidth==0.2.13
 gunicorn
+whitenoise
+openai

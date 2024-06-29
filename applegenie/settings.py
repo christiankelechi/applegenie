@@ -26,10 +26,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-3jnun&6pm_(9$icu*1wpeg7sy#w*v$fh=ktr3krcy76z!cl-0k"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-DEBUG = False
+DEBUG = True
+# DEBUG = False
 
-ALLOWED_HOSTS = ['*','16.16.128.140']
+ALLOWED_HOSTS = ['.applematch.com','198.7.121.174']
 
 
 # Application definition
@@ -98,13 +98,22 @@ AUTH_USER_MODEL="core_app_root_security_user.User"
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": BASE_DIR / "db.sqlite3",
+#     }
+# }
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'applematchdb',
+        'USER': 'applematchdbuser',
+        'PASSWORD': 'APPLEmatch24!',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -140,12 +149,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = "static/"
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 STATIC_URL = 'static/'
 STATIC_ROOT=os.path.join(BASE_DIR,'static')
+
+MEDIA_URL='media/'
+MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 # STATICFILES_DIRS=[os.path.join(BASE_DIR,'static')]
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field

@@ -11221,3 +11221,34 @@ Traceback (most recent call last):
     "whitenoise.middleware.WhiteNoiseMiddleware',
     ^
 SyntaxError: unterminated string literal (detected at line 70)
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 29, 2024 - 16:20:53
+Django version 5.0.6, using settings 'applegenie.settings'
+Starting development server at http://198.7.121.174:8001/
+Quit the server with CONTROL-C.
+
+[29/Jun/2024 16:21:21] "GET /api/docs/ HTTP/1.1" 200 2163
+[29/Jun/2024 16:21:21] "GET /static/drf-yasg/style.css HTTP/1.1" 200 1047
+[29/Jun/2024 16:21:22] "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 200 2093
+[29/Jun/2024 16:21:22] "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 200 56904
+[29/Jun/2024 16:21:22] "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 200 14964
+[29/Jun/2024 16:21:22] "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 200 145206
+[29/Jun/2024 16:21:23] "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 200 322863
+[29/Jun/2024 16:21:26] "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 200 1046583
+[29/Jun/2024 16:21:28] "GET /static/drf-yasg/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 200 628
+[29/Jun/2024 16:21:28] "GET /api/docs/?format=openapi HTTP/1.1" 200 7319
+[29/Jun/2024 16:21:29] "GET /api/docs/?format=openapi HTTP/1.1" 200 7319
+[29/Jun/2024 16:24:55] "GET /api/docs/ HTTP/1.1" 200 2163
+[29/Jun/2024 16:24:56] "GET /api/docs/?format=openapi HTTP/1.1" 200 7319
+[29/Jun/2024 16:24:58] "GET /api/docs/?format=openapi HTTP/1.1" 200 7319
+[29/Jun/2024 16:25:12] "GET /chat/chat_management/ HTTP/1.1" 200 1071
+Unauthorized: /chat/store_user_chats/1/
+[29/Jun/2024 16:25:43] "DELETE /chat/store_user_chats/1/ HTTP/1.1" 401 58
+Unauthorized: /chat/store_user_chats/1/
+[29/Jun/2024 16:26:27] "DELETE /chat/store_user_chats/1/ HTTP/1.1" 401 39
+[29/Jun/2024 16:28:11] "POST /chat/store_user_chats/ HTTP/1.1" 201 76
+[29/Jun/2024 16:52:23] code 400, message Bad request version ('À\x14À')
+[29/Jun/2024 16:52:23] You're accessing the development server over HTTPS, but it only supports HTTP.
