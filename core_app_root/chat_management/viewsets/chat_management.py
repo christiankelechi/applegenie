@@ -7,6 +7,8 @@ from core_app_root.chat_management.serializers.chat_management import StoreUserC
 from core_app_root.chat_management.models import StoreUserChatModel
 from rest_framework.permissions import AllowAny,IsAuthenticated
 from core_app_root.chat_management.aimodels_scripts.user_synopsis import process_user_response
+
+
     
 class StoreUserChatViewSet(viewsets.ModelViewSet):
     serializer_class=StoreUserChatSerializer
@@ -27,6 +29,10 @@ class ChatManagementViewsets(viewsets.ViewSet):
         context={"status": True, "message": "List of prompts fetched successfully", "data": [item[1] for item in list_of_messages]}
         return Response(context, status=status.HTTP_200_OK)
     
+    
+    def post(self,request):
+        
+        return Response({"":""})
     
     
     

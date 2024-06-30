@@ -58,3 +58,12 @@ class StoreUserChatModel(models.Model):
     
     def __str__(self):
         return f"{self.user} successfully answered the apple match suggestion question "
+    
+
+class QuestionAndAnswer(models.Model):
+    user=models.ForeignKey(User,on_delete=models.CASCADE,blank=True,null=True)
+    prompt_in=models.TextField(null=True,blank=True)
+    prompt_output=models.TextField(null=True,blank=True)
+    
+    def __str__(self):
+        return f"{self.user} question stored successfully "
