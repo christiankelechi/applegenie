@@ -43,12 +43,10 @@ urlpatterns = [
     # path('',include(('core_app_root.apple_gifting.routers','core_app_root.apple_gifting'))),
     path('',include(('core_app_root.security.auth.routers','core_app_root.security.auth'))),
     path('',include(('core_app_root.security.user.routers','core_app_root.security.user'))),
-    
-    
-    path('',include(('core_app_root.human_attributes.routers','core_app_root.human_attributes'))),
+    # path('',include(('core_app_root.human_attributes.routers','core_app_root.human_attributes'))),
     path('',include(('core_app_root.match_friends.routers','core_app_root.match_friends'))),
     path('',include(('core_app_root.chat_management.routers','core_app_root.chat_management'))),
-    
+    path('image_recognition/',include(('core_app_root.image_recognition.routers','core_app_root.image_recognition'))),
     
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
 ]

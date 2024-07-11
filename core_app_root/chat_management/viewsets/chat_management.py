@@ -30,9 +30,6 @@ class ChatManagementViewsets(viewsets.ViewSet):
         return Response(context, status=status.HTTP_200_OK)
     
     
-    def post(self,request):
-        
-        return Response({"":""})
-    
+   
     
     

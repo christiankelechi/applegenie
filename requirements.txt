@@ -173,3 +173,6 @@ wcwidth==0.2.13
 gunicorn
 whitenoise
 openai
+opencv-python
+tensorrt
+pymongo

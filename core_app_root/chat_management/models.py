@@ -51,17 +51,16 @@ class ChatClientModel(models.Model):
     
 
 class StoreUserChatModel(models.Model):
-    user=models.ForeignKey(User,on_delete=models.CASCADE,blank=True,null=True)
+    # user=models.ForeignKey(User,on_delete=models.CASCADE,blank=True,null=True)
     suggestion_question=models.TextField(null=True,blank=True)
     user_response=models.TextField(null=True,blank=True)
 
     
-    def __str__(self):
-        return f"{self.user} successfully answered the apple match suggestion question "
+    # def __str__(self):
+    #     return f"{self.user} successfully answered the apple match suggestion question "
     
 
 class QuestionAndAnswer(models.Model):
-    user=models.ForeignKey(User,on_delete=models.CASCADE,blank=True,null=True)
     prompt_in=models.TextField(null=True,blank=True)
     prompt_output=models.TextField(null=True,blank=True)
     

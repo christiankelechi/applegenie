@@ -15603,3 +15603,1801 @@ Bad Request: /www.shadowserver.org:443
 [30/Jun/2024 01:39:55] "CONNECT www.shadowserver.org:443 HTTP/1.1" 400 68642
 [30/Jun/2024 09:01:32] code 400, message Bad request version ('\x94H\x10V')
 [30/Jun/2024 09:01:32] You're accessing the development server over HTTPS, but it only supports HTTP.
+/home/leorizaserver/applegenie/applegenie/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 125, in inner_run
+    autoreload.raise_last_exception()
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/autoreload.py", line 87, in raise_last_exception
+    raise _exception[1]
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 394, in execute
+    autoreload.check_errors(django.setup)()
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/apps/registry.py", line 91, in populate
+    app_config = AppConfig.create(entry)
+                 ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/apps/config.py", line 172, in create
+    if mod_path and cls_name[0].isupper():
+                    ~~~~~~~~^^^
+IndexError: string index out of range
+/home/leorizaserver/applegenie/applegenie/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 30, 2024 - 10:28:37
+Django version 5.0.6, using settings 'applegenie.settings'
+Starting development server at http://198.7.121.174:8001/
+Quit the server with CONTROL-C.
+
+/home/leorizaserver/applegenie/core_app_root/face_recognition/models.py changed, reloading.
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 125, in inner_run
+    autoreload.raise_last_exception()
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/autoreload.py", line 87, in raise_last_exception
+    raise _exception[1]
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 394, in execute
+    autoreload.check_errors(django.setup)()
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/apps/registry.py", line 116, in populate
+    app_config.import_models()
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/apps/config.py", line 269, in import_models
+    self.models_module = import_module(models_module_name)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/leorizaserver/applegenie/core_app_root/face_recognition/models.py", line 4
+    class 
+          ^
+SyntaxError: invalid syntax
+/home/leorizaserver/applegenie/core_app_root/face_recognition/models.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 30, 2024 - 10:33:28
+Django version 5.0.6, using settings 'applegenie.settings'
+Starting development server at http://198.7.121.174:8001/
+Quit the server with CONTROL-C.
+
+/home/leorizaserver/applegenie/core_app_root/face_recognition/models.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 30, 2024 - 10:33:45
+Django version 5.0.6, using settings 'applegenie.settings'
+Starting development server at http://198.7.121.174:8001/
+Quit the server with CONTROL-C.
+
+/home/leorizaserver/applegenie/applegenie/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified some issues:
+
+WARNINGS:
+?: (urls.W005) URL namespace 'core_app_root.chat_management' isn't unique. You may not be able to reverse all URLs in this namespace
+
+System check identified 1 issue (0 silenced).
+June 30, 2024 - 10:43:28
+Django version 5.0.6, using settings 'applegenie.settings'
+Starting development server at http://198.7.121.174:8001/
+Quit the server with CONTROL-C.
+
+/home/leorizaserver/applegenie/applegenie/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified some issues:
+
+WARNINGS:
+?: (urls.W005) URL namespace 'core_app_root.chat_management' isn't unique. You may not be able to reverse all URLs in this namespace
+
+System check identified 1 issue (0 silenced).
+June 30, 2024 - 10:43:36
+Django version 5.0.6, using settings 'applegenie.settings'
+Starting development server at http://198.7.121.174:8001/
+Quit the server with CONTROL-C.
+
+/home/leorizaserver/applegenie/applegenie/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified some issues:
+
+WARNINGS:
+?: (urls.W005) URL namespace 'core_app_root.chat_management' isn't unique. You may not be able to reverse all URLs in this namespace
+
+System check identified 1 issue (0 silenced).
+June 30, 2024 - 10:43:41
+Django version 5.0.6, using settings 'applegenie.settings'
+Starting development server at http://198.7.121.174:8001/
+Quit the server with CONTROL-C.
+
+/home/leorizaserver/applegenie/applegenie/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 133, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/management/base.py", line 486, in check
+    all_issues = checks.run_checks(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/checks/registry.py", line 88, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/checks/urls.py", line 42, in check_url_namespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/checks/urls.py", line 61, in _load_all_namespaces
+    url_patterns = getattr(resolver, "url_patterns", [])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 738, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 731, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/leorizaserver/applegenie/applegenie/urls.py", line 51, in <module>
+    path('imagerecogniton',include(('core_app_root.image.routers','core_app_root.chat_management'))),
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1310, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'core_app_root.image'
+/home/leorizaserver/applegenie/applegenie/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 133, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/management/base.py", line 486, in check
+    all_issues = checks.run_checks(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/checks/registry.py", line 88, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/checks/urls.py", line 42, in check_url_namespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/checks/urls.py", line 61, in _load_all_namespaces
+    url_patterns = getattr(resolver, "url_patterns", [])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 738, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 731, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/leorizaserver/applegenie/applegenie/urls.py", line 51, in <module>
+    path('image_recognition/',include(('core_app_root.image_recogniton.routers','core_app_root.image_recognition'))),
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1310, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'core_app_root.image_recogniton'
+/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/numpy/_utils/__init__.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 133, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/management/base.py", line 486, in check
+    all_issues = checks.run_checks(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/checks/registry.py", line 88, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/checks/urls.py", line 42, in check_url_namespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/checks/urls.py", line 61, in _load_all_namespaces
+    url_patterns = getattr(resolver, "url_patterns", [])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 738, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 731, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/leorizaserver/applegenie/applegenie/urls.py", line 51, in <module>
+    path('image_recognition/',include(('core_app_root.image_recognition.routers','core_app_root.image_recognition'))),
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/leorizaserver/applegenie/core_app_root/image_recognition/routers.py", line 3, in <module>
+    from core_app_root.image_recognition.viewsets.image_recognizer import PhotoViewSet, TagViewSet
+  File "/home/leorizaserver/applegenie/core_app_root/image_recognition/viewsets/image_recognizer.py", line 8, in <module>
+    from keras.applications.resnet50 import ResNet50, preprocess_input
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/keras/__init__.py", line 4, in <module>
+    from keras.api import DTypePolicy
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/keras/api/__init__.py", line 8, in <module>
+    from keras.api import activations
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/keras/api/activations/__init__.py", line 7, in <module>
+    from keras.src.activations import deserialize
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/keras/src/__init__.py", line 1, in <module>
+    from keras.src import activations
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/keras/src/activations/__init__.py", line 3, in <module>
+    from keras.src.activations.activations import elu
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/keras/src/activations/activations.py", line 1, in <module>
+    from keras.src import backend
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/keras/src/backend/__init__.py", line 9, in <module>
+    from keras.src.backend.common.dtypes import result_type
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/keras/src/backend/common/__init__.py", line 2, in <module>
+    from keras.src.backend.common.dtypes import result_type
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/keras/src/backend/common/dtypes.py", line 5, in <module>
+    from keras.src.backend.common.variables import standardize_dtype
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/keras/src/backend/common/variables.py", line 11, in <module>
+    from keras.src.utils.naming import auto_name
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/keras/src/utils/__init__.py", line 1, in <module>
+    from keras.src.utils.audio_dataset_utils import audio_dataset_from_directory
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/keras/src/utils/audio_dataset_utils.py", line 4, in <module>
+    from keras.src.utils import dataset_utils
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/keras/src/utils/dataset_utils.py", line 9, in <module>
+    from keras.src import tree
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/keras/src/tree/__init__.py", line 1, in <module>
+    from keras.src.tree.tree_api import assert_same_structure
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/keras/src/tree/tree_api.py", line 6, in <module>
+    from keras.src.tree import optree_impl as tree_impl
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/keras/src/tree/optree_impl.py", line 17, in <module>
+    from tensorflow.python.trackable.data_structures import ListWrapper
+ModuleNotFoundError: No module named 'tensorflow'
+/home/leorizaserver/applegenie/core_app_root/image_recognition/admin.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+2024-07-03 10:07:29.587996: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-07-03 10:07:29.601349: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:479] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-07-03 10:07:29.631807: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:10575] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-07-03 10:07:29.635495: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1442] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-07-03 10:07:29.651104: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-03 10:07:31.338361: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+System check identified no issues (0 silenced).
+July 03, 2024 - 10:07:32
+Django version 5.0.6, using settings 'applegenie.settings'
+Starting development server at http://198.7.121.174:8001/
+Quit the server with CONTROL-C.
+
+/home/leorizaserver/applegenie/core_app_root/image_recognition/admin.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+2024-07-03 10:07:43.088352: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-07-03 10:07:43.104714: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:479] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-07-03 10:07:43.144364: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:10575] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-07-03 10:07:43.148801: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1442] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-07-03 10:07:43.169376: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-03 10:07:44.297120: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+System check identified no issues (0 silenced).
+July 03, 2024 - 10:07:45
+Django version 5.0.6, using settings 'applegenie.settings'
+Starting development server at http://198.7.121.174:8001/
+Quit the server with CONTROL-C.
+
+/home/leorizaserver/applegenie/core_app_root/image_recognition/admin.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+2024-07-03 10:08:01.158830: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-07-03 10:08:01.171118: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:479] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-07-03 10:08:01.192223: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:10575] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-07-03 10:08:01.192327: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1442] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-07-03 10:08:01.205770: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-03 10:08:02.428073: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+System check identified no issues (0 silenced).
+July 03, 2024 - 10:08:03
+Django version 5.0.6, using settings 'applegenie.settings'
+Starting development server at http://198.7.121.174:8001/
+Quit the server with CONTROL-C.
+
+/home/leorizaserver/applegenie/core_app_root/image_recognition/viewsets/image_recognizer.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+2024-07-03 10:24:22.123232: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-07-03 10:24:22.141607: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:479] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-07-03 10:24:22.189424: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:10575] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-07-03 10:24:22.190410: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1442] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-07-03 10:24:22.201543: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-03 10:24:24.703935: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+System check identified no issues (0 silenced).
+July 03, 2024 - 10:24:27
+Django version 5.0.6, using settings 'applegenie.settings'
+Starting development server at http://198.7.121.174:8001/
+Quit the server with CONTROL-C.
+
+/home/leorizaserver/applegenie/core_app_root/image_recognition/viewsets/image_recognizer.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+2024-07-03 10:25:13.288919: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-07-03 10:25:13.302758: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:479] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-07-03 10:25:13.334942: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:10575] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-07-03 10:25:13.335053: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1442] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-07-03 10:25:13.349975: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-03 10:25:14.679199: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+System check identified no issues (0 silenced).
+July 03, 2024 - 10:25:16
+Django version 5.0.6, using settings 'applegenie.settings'
+Starting development server at http://198.7.121.174:8001/
+Quit the server with CONTROL-C.
+
+/home/leorizaserver/applegenie/core_app_root/image_recognition/viewsets/image_recognizer.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+2024-07-03 10:26:24.990527: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-07-03 10:26:25.028003: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:479] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-07-03 10:26:25.053238: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:10575] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-07-03 10:26:25.059183: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1442] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-07-03 10:26:25.073033: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-03 10:26:26.655857: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+System check identified no issues (0 silenced).
+July 03, 2024 - 10:26:28
+Django version 5.0.6, using settings 'applegenie.settings'
+Starting development server at http://198.7.121.174:8001/
+Quit the server with CONTROL-C.
+
+Not Found: /
+[03/Jul/2024 19:05:09] "GET / HTTP/1.1" 404 6443
+Not Found: /
+[04/Jul/2024 00:11:23] "GET / HTTP/1.1" 404 6443
+[04/Jul/2024 00:44:37] code 400, message Bad HTTP/0.9 request type ("\x16\x03\x01\x00{\x01\x00\x00w\x03\x03Ð\x05Ô\x80|÷\x95á7Tçø\x93ý\x87\x1a\x1a·'æ¥Bº5(«¼fµªÐé\x00\x00\x1aÀ/À+À\x11À\x07À\x13À")
+[04/Jul/2024 00:44:37] You're accessing the development server over HTTPS, but it only supports HTTP.
+[04/Jul/2024 08:47:45] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x8a?Ì[_à@¥\x9aWâ\x8a\x922®Ö\x8d¾\x07rè#:;ñ\x82º¨ñrõã\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[04/Jul/2024 08:47:45] You're accessing the development server over HTTPS, but it only supports HTTP.
+Not Found: /
+[04/Jul/2024 12:45:48] "GET / HTTP/1.1" 404 6443
+Not Found: /favicon.ico
+[04/Jul/2024 12:45:55] "GET /favicon.ico HTTP/1.1" 404 6494
+Invalid HTTP_HOST header: 'api.ipify.org'. You may need to add 'api.ipify.org' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'api.ipify.org'. You may need to add 'api.ipify.org' to ALLOWED_HOSTS.
+Bad Request: /http:/api.ipify.org/
+[04/Jul/2024 12:46:00] "GET http://api.ipify.org/?format=json HTTP/1.1" 400 68509
+Invalid HTTP_HOST header: 'www.shadowserver.org'. You may need to add 'www.shadowserver.org' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'www.shadowserver.org'. You may need to add 'www.shadowserver.org' to ALLOWED_HOSTS.
+Bad Request: /www.shadowserver.org:443
+[04/Jul/2024 12:46:02] "CONNECT www.shadowserver.org:443 HTTP/1.1" 400 68711
+/home/leorizaserver/applegenie/core_app_root/chat_management/viewsets/question_and_answer.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+2024-07-04 14:13:05.879769: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-07-04 14:13:05.930024: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:479] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-07-04 14:13:06.119798: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:10575] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-07-04 14:13:06.119913: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1442] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-07-04 14:13:06.135776: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-04 14:13:07.576647: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+System check identified no issues (0 silenced).
+July 04, 2024 - 14:13:09
+Django version 5.0.6, using settings 'applegenie.settings'
+Starting development server at http://198.7.121.174:8001/
+Quit the server with CONTROL-C.
+
+/home/leorizaserver/applegenie/core_app_root/chat_management/viewsets/question_and_answer.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 133, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/management/base.py", line 486, in check
+    all_issues = checks.run_checks(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/checks/registry.py", line 88, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/checks/urls.py", line 42, in check_url_namespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/checks/urls.py", line 61, in _load_all_namespaces
+    url_patterns = getattr(resolver, "url_patterns", [])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 738, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 731, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/leorizaserver/applegenie/applegenie/urls.py", line 50, in <module>
+    path('',include(('core_app_root.chat_management.routers','core_app_root.chat_management'))),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/leorizaserver/applegenie/core_app_root/chat_management/routers.py", line 3, in <module>
+    from core_app_root.chat_management.viewsets import question_and_answer
+  File "/home/leorizaserver/applegenie/core_app_root/chat_management/viewsets/question_and_answer.py", line 35, in <module>
+    class QuestionAndAnswerViewsets(viewsets.ModelViewSet):
+  File "/home/leorizaserver/applegenie/core_app_root/chat_management/viewsets/question_and_answer.py", line 38, in QuestionAndAnswerViewsets
+    permission_classes=[AllowAny]
+                        ^^^^^^^^
+NameError: name 'AllowAny' is not defined
+/home/leorizaserver/applegenie/core_app_root/chat_management/viewsets/question_and_answer.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+2024-07-04 14:14:06.173416: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-07-04 14:14:06.188138: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:479] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-07-04 14:14:06.210401: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:10575] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-07-04 14:14:06.210505: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1442] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-07-04 14:14:06.226733: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-04 14:14:07.639560: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+System check identified no issues (0 silenced).
+July 04, 2024 - 14:14:08
+Django version 5.0.6, using settings 'applegenie.settings'
+Starting development server at http://198.7.121.174:8001/
+Quit the server with CONTROL-C.
+
+/home/leorizaserver/applegenie/core_app_root/chat_management/viewsets/question_and_answer.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+2024-07-04 14:15:29.040356: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-07-04 14:15:29.055292: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:479] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-07-04 14:15:29.078132: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:10575] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-07-04 14:15:29.078221: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1442] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-07-04 14:15:29.091629: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-04 14:15:30.281267: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+System check identified no issues (0 silenced).
+July 04, 2024 - 14:15:31
+Django version 5.0.6, using settings 'applegenie.settings'
+Starting development server at http://198.7.121.174:8001/
+Quit the server with CONTROL-C.
+
+/home/leorizaserver/applegenie/core_app_root/chat_management/viewsets/question_and_answer.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+2024-07-04 14:16:11.911105: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-07-04 14:16:11.924557: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:479] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-07-04 14:16:11.942612: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:10575] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-07-04 14:16:11.943538: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1442] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-07-04 14:16:11.956862: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-04 14:16:13.548721: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+System check identified no issues (0 silenced).
+July 04, 2024 - 14:16:14
+Django version 5.0.6, using settings 'applegenie.settings'
+Starting development server at http://198.7.121.174:8001/
+Quit the server with CONTROL-C.
+
+/home/leorizaserver/applegenie/core_app_root/chat_management/viewsets/question_and_answer.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+2024-07-04 18:34:23.673408: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-07-04 18:34:24.135723: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:479] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-07-04 18:34:24.489097: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:10575] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-07-04 18:34:24.489545: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1442] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-07-04 18:34:24.905689: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-04 18:34:29.960005: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+System check identified no issues (0 silenced).
+July 04, 2024 - 18:34:36
+Django version 5.0.6, using settings 'applegenie.settings'
+Starting development server at http://198.7.121.174:8001/
+Quit the server with CONTROL-C.
+
+Not Found: /
+[04/Jul/2024 19:20:29] "GET / HTTP/1.1" 404 6443
+Not Found: /
+[04/Jul/2024 21:29:59] "GET / HTTP/1.1" 404 6443
+Not Found: /console
+[04/Jul/2024 21:30:03] "GET /console HTTP/1.1" 404 6482
+Not Found: /
+[05/Jul/2024 05:34:49] "GET / HTTP/1.1" 404 6443
+Not Found: /favicon.ico
+[05/Jul/2024 05:35:12] "GET /favicon.ico HTTP/1.1" 404 6494
+Invalid HTTP_HOST header: 'api.ipify.org'. You may need to add 'api.ipify.org' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'api.ipify.org'. You may need to add 'api.ipify.org' to ALLOWED_HOSTS.
+Bad Request: /http:/api.ipify.org/
+[05/Jul/2024 05:35:24] "GET http://api.ipify.org/?format=json HTTP/1.1" 400 68466
+Invalid HTTP_HOST header: 'www.shadowserver.org'. You may need to add 'www.shadowserver.org' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'www.shadowserver.org'. You may need to add 'www.shadowserver.org' to ALLOWED_HOSTS.
+Bad Request: /www.shadowserver.org:443
+[05/Jul/2024 05:35:25] "CONNECT www.shadowserver.org:443 HTTP/1.1" 400 68669
+[05/Jul/2024 10:43:43] code 400, message Bad request version ('À\x14À')
+[05/Jul/2024 10:43:43] You're accessing the development server over HTTPS, but it only supports HTTP.
+[05/Jul/2024 11:55:59] code 400, message Bad request version ('À\x14À')
+[05/Jul/2024 11:55:59] You're accessing the development server over HTTPS, but it only supports HTTP.
+/home/leorizaserver/applegenie/core_app_root/human_attributes/viewsets/human_attributes.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+2024-07-05 14:24:51.925608: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-07-05 14:24:51.978918: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:479] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-07-05 14:24:52.040846: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:10575] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-07-05 14:24:52.040930: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1442] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-07-05 14:24:52.190588: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-05 14:24:54.573878: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+System check identified no issues (0 silenced).
+July 05, 2024 - 14:24:56
+Django version 5.0.6, using settings 'applegenie.settings'
+Starting development server at http://198.7.121.174:8001/
+Quit the server with CONTROL-C.
+
+/home/leorizaserver/applegenie/core_app_root/human_attributes/viewsets/human_attributes.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+2024-07-05 14:44:05.566455: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-07-05 14:44:05.791314: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:479] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-07-05 14:44:05.871472: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:10575] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-07-05 14:44:05.871813: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1442] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-07-05 14:44:05.999628: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-05 14:44:08.201129: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+System check identified no issues (0 silenced).
+July 05, 2024 - 14:44:10
+Django version 5.0.6, using settings 'applegenie.settings'
+Starting development server at http://198.7.121.174:8001/
+Quit the server with CONTROL-C.
+
+[05/Jul/2024 15:16:36] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+[05/Jul/2024 15:16:36] "  ,'à     Cookie: mstshash=Domain" 400 -
+[05/Jul/2024 15:16:36,653] - Broken pipe from ('31.43.185.3', 8582)
+[05/Jul/2024 15:16:36] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+[05/Jul/2024 15:16:36] "  ,'à     Cookie: mstshash=Domain" 400 -
+[05/Jul/2024 15:16:36] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+[05/Jul/2024 15:16:36] "  ,'à     Cookie: mstshash=Domain" 400 -
+Not Found: /
+[05/Jul/2024 18:59:01] "GET / HTTP/1.1" 404 6443
+/home/leorizaserver/applegenie/core_app_root/image_recognition/viewsets/image_recognizer.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+2024-07-05 21:29:47.002202: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-07-05 21:29:47.456535: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:479] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-07-05 21:29:47.967288: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:10575] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-07-05 21:29:47.967628: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1442] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-07-05 21:29:48.417914: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-05 21:29:51.789026: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+System check identified no issues (0 silenced).
+July 05, 2024 - 21:29:56
+Django version 5.0.6, using settings 'applegenie.settings'
+Starting development server at http://198.7.121.174:8001/
+Quit the server with CONTROL-C.
+
+/home/leorizaserver/applegenie/core_app_root/match_friends/viewsets/match_friends.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+2024-07-05 21:31:31.700813: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-07-05 21:31:31.746960: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:479] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-07-05 21:31:31.815463: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:10575] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-07-05 21:31:31.815549: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1442] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-07-05 21:31:31.844347: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-05 21:31:33.636054: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+System check identified no issues (0 silenced).
+July 05, 2024 - 21:31:35
+Django version 5.0.6, using settings 'applegenie.settings'
+Starting development server at http://198.7.121.174:8001/
+Quit the server with CONTROL-C.
+
+/home/leorizaserver/applegenie/core_app_root/match_friends/viewsets/match_friends.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+2024-07-05 21:31:46.581031: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-07-05 21:31:46.598194: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:479] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-07-05 21:31:46.626278: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:10575] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-07-05 21:31:46.626376: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1442] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-07-05 21:31:46.642232: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-05 21:31:48.137864: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+System check identified no issues (0 silenced).
+July 05, 2024 - 21:31:49
+Django version 5.0.6, using settings 'applegenie.settings'
+Starting development server at http://198.7.121.174:8001/
+Quit the server with CONTROL-C.
+
+/home/leorizaserver/applegenie/core_app_root/match_friends/viewsets/match_friends.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 133, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/management/base.py", line 486, in check
+    all_issues = checks.run_checks(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/checks/registry.py", line 88, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/checks/urls.py", line 42, in check_url_namespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/checks/urls.py", line 61, in _load_all_namespaces
+    url_patterns = getattr(resolver, "url_patterns", [])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 738, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 731, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/leorizaserver/applegenie/applegenie/urls.py", line 49, in <module>
+    path('',include(('core_app_root.match_friends.routers','core_app_root.match_friends'))),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/leorizaserver/applegenie/core_app_root/match_friends/routers.py", line 2, in <module>
+    from core_app_root.match_friends.viewsets import match_friends
+  File "/home/leorizaserver/applegenie/core_app_root/match_friends/viewsets/match_friends.py", line 15
+    file_path = os.path.join(os.getcwd(),'core_app_root/match_friends/viewsets/interests.json')
+IndentationError: unexpected indent
+/home/leorizaserver/applegenie/core_app_root/match_friends/viewsets/match_friends.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 133, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/management/base.py", line 486, in check
+    all_issues = checks.run_checks(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/checks/registry.py", line 88, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/checks/urls.py", line 42, in check_url_namespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/checks/urls.py", line 61, in _load_all_namespaces
+    url_patterns = getattr(resolver, "url_patterns", [])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 738, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 731, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/leorizaserver/applegenie/applegenie/urls.py", line 49, in <module>
+    path('',include(('core_app_root.match_friends.routers','core_app_root.match_friends'))),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/leorizaserver/applegenie/core_app_root/match_friends/routers.py", line 2, in <module>
+    from core_app_root.match_friends.viewsets import match_friends
+  File "/home/leorizaserver/applegenie/core_app_root/match_friends/viewsets/match_friends.py", line 15
+    file_path = os.path.join(os.getcwd(),'core_app_root/match_friends/viewsets/interests.json')
+IndentationError: unexpected indent
+/home/leorizaserver/applegenie/core_app_root/match_friends/viewsets/match_friends.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 133, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/management/base.py", line 486, in check
+    all_issues = checks.run_checks(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/checks/registry.py", line 88, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/checks/urls.py", line 42, in check_url_namespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/checks/urls.py", line 61, in _load_all_namespaces
+    url_patterns = getattr(resolver, "url_patterns", [])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 738, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 731, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/leorizaserver/applegenie/applegenie/urls.py", line 49, in <module>
+    path('',include(('core_app_root.match_friends.routers','core_app_root.match_friends'))),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/leorizaserver/applegenie/core_app_root/match_friends/routers.py", line 2, in <module>
+    from core_app_root.match_friends.viewsets import match_friends
+  File "/home/leorizaserver/applegenie/core_app_root/match_friends/viewsets/match_friends.py", line 15
+    file_path = os.path.join(os.getcwd(),'core_app_root/match_friends/viewsets/interests.json')
+IndentationError: unexpected indent
+/home/leorizaserver/applegenie/core_app_root/match_friends/viewsets/match_friends.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+2024-07-05 21:32:56.031861: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-07-05 21:32:56.152999: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:479] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-07-05 21:32:56.421208: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:10575] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-07-05 21:32:56.421482: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1442] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-07-05 21:32:56.646572: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-05 21:32:59.656838: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+System check identified no issues (0 silenced).
+July 05, 2024 - 21:33:04
+Django version 5.0.6, using settings 'applegenie.settings'
+Starting development server at http://198.7.121.174:8001/
+Quit the server with CONTROL-C.
+
+/home/leorizaserver/applegenie/core_app_root/match_friends/viewsets/match_friends.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+2024-07-05 21:46:37.323651: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-07-05 21:46:37.354781: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:479] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-07-05 21:46:37.400464: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:10575] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-07-05 21:46:37.400551: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1442] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-07-05 21:46:37.498369: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-05 21:46:39.344471: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+System check identified no issues (0 silenced).
+July 05, 2024 - 21:46:41
+Django version 5.0.6, using settings 'applegenie.settings'
+Starting development server at http://198.7.121.174:8001/
+Quit the server with CONTROL-C.
+
+/home/leorizaserver/applegenie/core_app_root/match_friends/viewsets/match_friends.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+2024-07-05 21:46:54.227506: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-07-05 21:46:54.245650: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:479] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-07-05 21:46:54.269797: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:10575] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-07-05 21:46:54.269916: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1442] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-07-05 21:46:54.285026: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-05 21:46:55.821378: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+System check identified no issues (0 silenced).
+July 05, 2024 - 21:46:57
+Django version 5.0.6, using settings 'applegenie.settings'
+Starting development server at http://198.7.121.174:8001/
+Quit the server with CONTROL-C.
+
+[06/Jul/2024 03:45:17] code 400, message Bad request version ('À\x14À')
+[06/Jul/2024 03:45:17] You're accessing the development server over HTTPS, but it only supports HTTP.
+Not Found: /
+[06/Jul/2024 04:34:01] "GET / HTTP/1.1" 404 6443
+Not Found: /
+[06/Jul/2024 04:34:04] "GET / HTTP/1.1" 404 6443
+Not Found: /favicon.ico
+[06/Jul/2024 04:34:05] "GET /favicon.ico HTTP/1.1" 404 6494
+[06/Jul/2024 04:34:07] code 400, message Bad request version ('À\x13À')
+[06/Jul/2024 04:34:07] You're accessing the development server over HTTPS, but it only supports HTTP.
+[06/Jul/2024 04:34:07] code 400, message Bad request version ('À\x13À')
+[06/Jul/2024 04:34:07] You're accessing the development server over HTTPS, but it only supports HTTP.
+[06/Jul/2024 04:34:08] code 400, message Bad request version ('À\x13À')
+[06/Jul/2024 04:34:08] You're accessing the development server over HTTPS, but it only supports HTTP.
+Not Found: /
+[06/Jul/2024 06:11:45] "GET / HTTP/1.1" 404 6443
+Not Found: /favicon.ico
+[06/Jul/2024 06:12:02] "GET /favicon.ico HTTP/1.1" 404 6494
+Invalid HTTP_HOST header: 'api.ipify.org'. You may need to add 'api.ipify.org' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'api.ipify.org'. You may need to add 'api.ipify.org' to ALLOWED_HOSTS.
+Bad Request: /http:/api.ipify.org/
+[06/Jul/2024 06:12:13] "GET http://api.ipify.org/?format=json HTTP/1.1" 400 68581
+Invalid HTTP_HOST header: 'www.shadowserver.org'. You may need to add 'www.shadowserver.org' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'www.shadowserver.org'. You may need to add 'www.shadowserver.org' to ALLOWED_HOSTS.
+Bad Request: /www.shadowserver.org:443
+[06/Jul/2024 06:12:14] "CONNECT www.shadowserver.org:443 HTTP/1.1" 400 68784
+Not Found: /
+[06/Jul/2024 08:19:34] "GET / HTTP/1.1" 404 6443
+Not Found: /
+[06/Jul/2024 09:42:55] "GET / HTTP/1.1" 404 6443
+[06/Jul/2024 12:02:05] code 400, message Bad request version ('À\x14À')
+[06/Jul/2024 12:02:05] You're accessing the development server over HTTPS, but it only supports HTTP.
+/home/leorizaserver/applegenie/core_app_root/human_attributes/viewsets/human_attributes.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+2024-07-06 17:06:35.733318: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-07-06 17:06:36.136297: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:479] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-07-06 17:06:36.344288: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:10575] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-07-06 17:06:36.344801: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1442] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-07-06 17:06:36.703813: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-06 17:06:40.112617: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+System check identified no issues (0 silenced).
+July 06, 2024 - 17:06:45
+Django version 5.0.6, using settings 'applegenie.settings'
+Starting development server at http://198.7.121.174:8001/
+Quit the server with CONTROL-C.
+
+/home/leorizaserver/applegenie/core_app_root/chat_management/viewsets/question_and_answer.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+2024-07-06 17:08:55.504563: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-07-06 17:08:55.684097: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:479] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-07-06 17:08:55.708905: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:10575] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-07-06 17:08:55.711057: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1442] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-07-06 17:08:55.726873: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-06 17:08:57.220623: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+System check identified no issues (0 silenced).
+July 06, 2024 - 17:09:00
+Django version 5.0.6, using settings 'applegenie.settings'
+Starting development server at http://198.7.121.174:8001/
+Quit the server with CONTROL-C.
+
+/home/leorizaserver/applegenie/core_app_root/human_attributes/serializers/human_attributes.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 133, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/management/base.py", line 486, in check
+    all_issues = checks.run_checks(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/checks/registry.py", line 88, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/checks/urls.py", line 42, in check_url_namespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/checks/urls.py", line 61, in _load_all_namespaces
+    url_patterns = getattr(resolver, "url_patterns", [])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 738, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 731, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/leorizaserver/applegenie/applegenie/urls.py", line 48, in <module>
+    path('',include(('core_app_root.human_attributes.routers','core_app_root.human_attributes'))),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/leorizaserver/applegenie/core_app_root/human_attributes/routers.py", line 2, in <module>
+    from core_app_root.human_attributes.viewsets import human_attributes
+  File "/home/leorizaserver/applegenie/core_app_root/human_attributes/viewsets/human_attributes.py", line 2, in <module>
+    from core_app_root.human_attributes.serializers import human_attributes
+  File "/home/leorizaserver/applegenie/core_app_root/human_attributes/serializers/human_attributes.py", line 8
+    class HumanInterestSerializer(serializers.ModelSerializer):
+    ^
+IndentationError: expected an indented block after class definition on line 3
+/home/leorizaserver/applegenie/core_app_root/human_attributes/serializers/human_attributes.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 133, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/management/base.py", line 486, in check
+    all_issues = checks.run_checks(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/checks/registry.py", line 88, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/checks/urls.py", line 42, in check_url_namespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/checks/urls.py", line 61, in _load_all_namespaces
+    url_patterns = getattr(resolver, "url_patterns", [])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 738, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 731, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/leorizaserver/applegenie/applegenie/urls.py", line 48, in <module>
+    path('',include(('core_app_root.human_attributes.routers','core_app_root.human_attributes'))),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/leorizaserver/applegenie/core_app_root/human_attributes/routers.py", line 2, in <module>
+    from core_app_root.human_attributes.viewsets import human_attributes
+  File "/home/leorizaserver/applegenie/core_app_root/human_attributes/viewsets/human_attributes.py", line 2, in <module>
+    from core_app_root.human_attributes.serializers import human_attributes
+  File "/home/leorizaserver/applegenie/core_app_root/human_attributes/serializers/human_attributes.py", line 9
+    class HumanInterestSerializer(serializers.ModelSerializer):
+    ^
+IndentationError: expected an indented block after class definition on line 3
+/home/leorizaserver/applegenie/core_app_root/human_attributes/serializers/human_attributes.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 133, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/management/base.py", line 486, in check
+    all_issues = checks.run_checks(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/checks/registry.py", line 88, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/checks/urls.py", line 42, in check_url_namespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/checks/urls.py", line 61, in _load_all_namespaces
+    url_patterns = getattr(resolver, "url_patterns", [])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 738, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 731, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/leorizaserver/applegenie/applegenie/urls.py", line 48, in <module>
+    path('',include(('core_app_root.human_attributes.routers','core_app_root.human_attributes'))),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/leorizaserver/applegenie/core_app_root/human_attributes/routers.py", line 2, in <module>
+    from core_app_root.human_attributes.viewsets import human_attributes
+  File "/home/leorizaserver/applegenie/core_app_root/human_attributes/viewsets/human_attributes.py", line 2, in <module>
+    from core_app_root.human_attributes.serializers import human_attributes
+  File "/home/leorizaserver/applegenie/core_app_root/human_attributes/serializers/human_attributes.py", line 3, in <module>
+    class HumanAttributesSerializer(serializers.ModelSerializer):
+  File "/home/leorizaserver/applegenie/core_app_root/human_attributes/serializers/human_attributes.py", line 4, in HumanAttributesSerializer
+    age
+NameError: name 'age' is not defined
+/home/leorizaserver/applegenie/core_app_root/human_attributes/serializers/human_attributes.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 133, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/management/base.py", line 486, in check
+    all_issues = checks.run_checks(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/checks/registry.py", line 88, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/checks/urls.py", line 42, in check_url_namespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/checks/urls.py", line 61, in _load_all_namespaces
+    url_patterns = getattr(resolver, "url_patterns", [])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 738, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 731, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/leorizaserver/applegenie/applegenie/urls.py", line 48, in <module>
+    path('',include(('core_app_root.human_attributes.routers','core_app_root.human_attributes'))),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/leorizaserver/applegenie/core_app_root/human_attributes/routers.py", line 2, in <module>
+    from core_app_root.human_attributes.viewsets import human_attributes
+  File "/home/leorizaserver/applegenie/core_app_root/human_attributes/viewsets/human_attributes.py", line 2, in <module>
+    from core_app_root.human_attributes.serializers import human_attributes
+  File "/home/leorizaserver/applegenie/core_app_root/human_attributes/serializers/human_attributes.py", line 4
+    age=
+        ^
+SyntaxError: invalid syntax
+/home/leorizaserver/applegenie/core_app_root/human_attributes/serializers/human_attributes.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 133, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/management/base.py", line 486, in check
+    all_issues = checks.run_checks(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/checks/registry.py", line 88, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/checks/urls.py", line 42, in check_url_namespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/checks/urls.py", line 61, in _load_all_namespaces
+    url_patterns = getattr(resolver, "url_patterns", [])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 738, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 731, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/leorizaserver/applegenie/applegenie/urls.py", line 48, in <module>
+    path('',include(('core_app_root.human_attributes.routers','core_app_root.human_attributes'))),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/leorizaserver/applegenie/core_app_root/human_attributes/routers.py", line 2, in <module>
+    from core_app_root.human_attributes.viewsets import human_attributes
+  File "/home/leorizaserver/applegenie/core_app_root/human_attributes/viewsets/human_attributes.py", line 2, in <module>
+    from core_app_root.human_attributes.serializers import human_attributes
+  File "/home/leorizaserver/applegenie/core_app_root/human_attributes/serializers/human_attributes.py", line 3, in <module>
+    class HumanAttributesSerializer(serializers.ModelSerializer):
+  File "/home/leorizaserver/applegenie/core_app_root/human_attributes/serializers/human_attributes.py", line 4, in HumanAttributesSerializer
+    age=se
+        ^^
+NameError: name 'se' is not defined. Did you mean: 'set'?
+/home/leorizaserver/applegenie/core_app_root/human_attributes/serializers/human_attributes.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 133, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/management/base.py", line 486, in check
+    all_issues = checks.run_checks(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/checks/registry.py", line 88, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/checks/urls.py", line 42, in check_url_namespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/checks/urls.py", line 61, in _load_all_namespaces
+    url_patterns = getattr(resolver, "url_patterns", [])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 738, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 731, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/leorizaserver/applegenie/applegenie/urls.py", line 48, in <module>
+    path('',include(('core_app_root.human_attributes.routers','core_app_root.human_attributes'))),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/leorizaserver/applegenie/core_app_root/human_attributes/routers.py", line 2, in <module>
+    from core_app_root.human_attributes.viewsets import human_attributes
+  File "/home/leorizaserver/applegenie/core_app_root/human_attributes/viewsets/human_attributes.py", line 2, in <module>
+    from core_app_root.human_attributes.serializers import human_attributes
+  File "/home/leorizaserver/applegenie/core_app_root/human_attributes/serializers/human_attributes.py", line 4
+    age=serializer.
+                   ^
+SyntaxError: invalid syntax
+/home/leorizaserver/applegenie/core_app_root/human_attributes/serializers/human_attributes.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 133, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/management/base.py", line 486, in check
+    all_issues = checks.run_checks(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/checks/registry.py", line 88, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/checks/urls.py", line 42, in check_url_namespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/checks/urls.py", line 61, in _load_all_namespaces
+    url_patterns = getattr(resolver, "url_patterns", [])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 738, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/urls/resolvers.py", line 731, in urlconf_module
+    return import_module(self.urlconf_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/leorizaserver/applegenie/applegenie/urls.py", line 48, in <module>
+    path('',include(('core_app_root.human_attributes.routers','core_app_root.human_attributes'))),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/urls/conf.py", line 39, in include
+    urlconf_module = import_module(urlconf_module)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/leorizaserver/applegenie/core_app_root/human_attributes/routers.py", line 2, in <module>
+    from core_app_root.human_attributes.viewsets import human_attributes
+  File "/home/leorizaserver/applegenie/core_app_root/human_attributes/viewsets/human_attributes.py", line 2, in <module>
+    from core_app_root.human_attributes.serializers import human_attributes
+  File "/home/leorizaserver/applegenie/core_app_root/human_attributes/serializers/human_attributes.py", line 4
+    age=serializers.
+                    ^
+SyntaxError: invalid syntax
+/home/leorizaserver/applegenie/core_app_root/human_attributes/serializers/human_attributes.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+2024-07-06 17:13:30.426905: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-07-06 17:13:30.444233: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:479] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-07-06 17:13:30.478233: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:10575] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-07-06 17:13:30.488874: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1442] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-07-06 17:13:30.512726: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-06 17:13:32.236561: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+System check identified no issues (0 silenced).
+July 06, 2024 - 17:13:33
+Django version 5.0.6, using settings 'applegenie.settings'
+Starting development server at http://198.7.121.174:8001/
+Quit the server with CONTROL-C.
+
+/home/leorizaserver/applegenie/applegenie/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+2024-07-06 17:14:29.809816: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-07-06 17:14:29.823557: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:479] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-07-06 17:14:29.846684: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:10575] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-07-06 17:14:29.846773: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1442] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-07-06 17:14:29.863474: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-06 17:14:30.940326: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+System check identified no issues (0 silenced).
+July 06, 2024 - 17:14:32
+Django version 5.0.6, using settings 'applegenie.settings'
+Starting development server at http://198.7.121.174:8001/
+Quit the server with CONTROL-C.
+
+[06/Jul/2024 20:56:41] code 400, message Bad request version ('À\x13À')
+[06/Jul/2024 20:56:41] You're accessing the development server over HTTPS, but it only supports HTTP.
+[06/Jul/2024 20:56:41] code 400, message Bad request version ('À(À$À\x14À')
+[06/Jul/2024 20:56:41] You're accessing the development server over HTTPS, but it only supports HTTP.
+Not Found: /
+[06/Jul/2024 21:23:09] "GET / HTTP/1.1" 404 6032
+/home/leorizaserver/applegenie/applegenie/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+2024-07-06 22:48:27.411555: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-07-06 22:48:27.969323: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:479] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-07-06 22:48:28.139782: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:10575] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-07-06 22:48:28.140273: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1442] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-07-06 22:48:28.464557: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-06 22:48:33.861762: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+System check identified no issues (0 silenced).
+July 06, 2024 - 22:48:42
+Django version 5.0.6, using settings 'applegenie.settings'
+Starting development server at http://198.7.121.174:8001/
+Quit the server with CONTROL-C.
+
+/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/whitenoise/responders.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+2024-07-06 22:56:40.070299: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-07-06 22:56:40.121366: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:479] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-07-06 22:56:40.171717: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:10575] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-07-06 22:56:40.181730: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1442] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-07-06 22:56:40.239914: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-06 22:56:42.537734: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Traceback (most recent call last):
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/template/utils.py", line 69, in __getitem__
+    return self._engines[alias]
+           ~~~~~~~~~~~~~^^^^^^^
+KeyError: 'django'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 128, in get_package_libraries
+    module = import_module(entry[1])
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/templatetags/cache.py", line 2, in <module>
+    from django.core.cache.utils import make_template_fragment_key
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/cache/utils.py", line 1, in <module>
+    from django.utils.crypto import md5
+ImportError: cannot import name 'md5' from 'django.utils.crypto' (/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/crypto.py)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/leorizaserver/applegenie/manage.py", line 22, in <module>
+    main()
+  File "/home/leorizaserver/applegenie/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 442, in execute_from_command_line
+    utility.execute()
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 436, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/management/base.py", line 413, in run_from_argv
+    except CommandError as e:
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 74, in execute
+    super().execute(*args, **options)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/management/base.py", line 459, in execute
+    if output:
+             ^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 111, in handle
+    self.run(**options)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/core/management/commands/runserver.py", line 118, in run
+    autoreload.run_with_reloader(self.inner_run, **options)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/autoreload.py", line 671, in run_with_reloader
+    start_django(reloader, main_func, *args, **kwargs)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/autoreload.py", line 660, in start_django
+    reloader.run(django_main_thread)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/autoreload.py", line 343, in run
+    autoreload_started.send(sender=self)
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    registered with a connect if you actually want something to
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/template/autoreload.py", line 50, in watch_for_template_changes
+    return
+           
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/template/autoreload.py", line 16, in get_template_directories
+    for backend in engines.all():
+                   ^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/template/utils.py", line 94, in all
+    return [self[alias] for alias in self]
+            ~~~~^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/template/utils.py", line 85, in __getitem__
+    engine = engine_cls(params)
+             ^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 24, in __init__
+    options["libraries"] = self.get_templatetag_libraries(libraries)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 42, in get_templatetag_libraries
+    libraries = get_installed_libraries()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 116, in get_installed_libraries
+    return {
+           ^
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 105, in get_template_tag_modules
+    for name in get_package_libraries(pkg):
+  File "/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 130, in get_package_libraries
+    raise InvalidTemplateLibrary(
+django.template.library.InvalidTemplateLibrary: Invalid template library specified. ImportError raised when trying to load 'django.templatetags.cache': cannot import name 'md5' from 'django.utils.crypto' (/home/leorizaserver/applegenie/venv/lib/python3.12/site-packages/django/utils/crypto.py)

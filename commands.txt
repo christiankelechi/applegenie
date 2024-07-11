@@ -9,9 +9,6 @@ wget https://developer.download.nvidia.com/compute/cuda/11.7.0/local_installers/
 sudo apt install nvidia-cuda-toolkit gcc-6
 
 nvcc --version
-
-
-
 UbuntuUbuntu Based
 How To Install CUDA on Ubuntu 24.04 LTS
 r00t

@@ -18,6 +18,7 @@ class HumanInterestsViewsets(viewsets.ViewSet):
         return Response({"status":True,"message":"List of interests fetched successfully","data":interests})
     
     def create(self,request):
+        
         serializer=self.serializer_class(data=request.data)
         if serializer_class.is_valid():
             file_path=os.path.join(os.getcwd(),'core_app_root/match_friends/viewsets/interests.json')
@@ -39,7 +40,7 @@ class MatchFriendsViewsets(viewsets.ModelViewSet):
         serializer=self.serializer_class(data=request.data)
         if serializer.is_valid():
             
-            return Response({"status":True,},status=status.HTTP_200_OK)
+            return Response({"status":True,"data":"Matched successfully"},status=status.HTTP_200_OK)
         
     def list(self,request):
         

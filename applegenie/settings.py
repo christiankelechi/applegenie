@@ -26,10 +26,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-3jnun&6pm_(9$icu*1wpeg7sy#w*v$fh=ktr3krcy76z!cl-0k"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-# DEBUG = False
+# DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['.applematch.com','198.7.121.174','localhost']
+ALLOWED_HOSTS = ['.applematch.com','198.7.121.174','localhost','127.0.0.1']
 
 
 # Application definition
@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     "core_app_root.security",
     "core_app_root.security.user",
     "core_app_root.security.auth",
+    "core_app_root.image_recognition"
     
    
     
@@ -70,8 +71,10 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
+
   
 ]
+
 
 ROOT_URLCONF = "applegenie.urls"
 
@@ -133,7 +136,24 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
+# LOGGING = {
+#     "version": 1,
+#     "disable_existing_loggers": False,
+#     "handlers": {
+#         "file": {
+#             "level": "DEBUG",
+#             "class": "logging.FileHandler",
+#             "filename": "/home/leorizaserver/applegenie/debug.log",
+#         },
+#     },
+#     "loggers": {
+#         "django": {
+#             "handlers": ["file"],
+#             "level": "DEBUG",
+#             "propagate": True,
+#         },
+#     },
+# }
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
@@ -164,7 +184,7 @@ MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
-    'rest_framework.permissions.AllowAny',
+    'rest_framework.permissions.IsAuthenticated',
     ),
     'DEFAULT_AUTHENTICATION_CLASSES': (
     'rest_framework_simplejwt.authentication.JWTAuthentication',
