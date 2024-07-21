@@ -135,7 +135,7 @@ AUTH_PASSWORD_VALIDATORS = [
         "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
     },
 ]
-
+EXPOSE_HIDDEN_ENDPOINT = False  
 # LOGGING = {
 #     "version": 1,
 #     "disable_existing_loggers": False,
