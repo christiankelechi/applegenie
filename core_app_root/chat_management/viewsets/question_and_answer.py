@@ -14,6 +14,8 @@ import asyncio
 from core_app_root.chat_management.viewsets.questionandanswer import chatRequest
 import requests
 from core_app_root import base_url
+from core_app_root.chat_management.models import StoreUserChatModel,GenieResponseToUser,UserResponseToGenie,GenieQuestions,UserQuestions
+
 def applegeniesynopsis():
     
     response_output=" I am Ai Genie, your personal Companion, I will Help you to Seek truth and happiness so , so any question you need to know about your future life partner"
@@ -57,7 +59,7 @@ class QuestionAndAnswerViewsets(viewsets.ModelViewSet):
             if serializer.is_valid():
                 
                 openai.api_key = os.getenv("OPENAI_API_KEY")
-                prompt_output = str(asyncio.run(chatRequest(str(serializer.data['prompt_in']))))
+                prompt_output = str(chatRequest(str(serializer.data['prompt_in'])))
                 return Response({"message": "Question answered successfully", "prompt_response": prompt_output, "status": True, "data": serializer.data}, status=status.HTTP_200_OK)
             else:
                 return Response({"message": "Invalid data provided", "status": False, "data": serializer.data}, status=status.HTTP_406_NOT_ACCEPTABLE)
@@ -81,7 +83,11 @@ class QuestionAndAnswerViewsetsMain(viewsets.ModelViewSet):
                 # prompt_output = str(asyncio.run(chatRequest(str(serializer.data['prompt_in']))))
                 # return Response({"message": "Question answered successfully", "prompt_response": prompt_output, "status": True, "data": serializer.data}, status=status.HTTP_200_OK)
                 prompt_in=str(serializer.data['prompt_in'])
-                response=requests.post(url=f"{base_url.main_url}/chat/questionandanswer/",json={"prompt_in":prompt_in})
+                email=str(serializer.data['email'])
+                response=requests.post(url=f"{base_url.main_url}/chat/questionandanswer/",json={"email":email,"prompt_in":prompt_in})
+                
+                UserQuestions.objects.create(email=email,user_questions=prompt_in)
+                GenieResponseToUser.objects.create(email=email,genie_response=str(response.json()['prompt_response']))
                 return Response({"message": "Response generated successfully", "status": True, "data": response.json()}, status=status.HTTP_200_OK)
             else:
                 return Response({"message": "Invalid data provided", "status": False, "data": serializer.data}, status=status.HTTP_406_NOT_ACCEPTABLE)

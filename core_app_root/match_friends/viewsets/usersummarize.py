@@ -1,9 +1,5 @@
 import asyncio
-from core_app_root.chat_management.models import GenieResponseToUser,UserQuestions
-
-
-
-def chatRequest(message):
+async def chatRequest(message):
     from openai import OpenAI
     import os
     import openai
@@ -21,6 +17,5 @@ def chatRequest(message):
     ]
     )
 
-    # await UserQuestions.objects.create(email=email,user_questions=message)
     return str(completion.choices[0].message.content)
 # asyncio.run(chatRequest("what is java"))

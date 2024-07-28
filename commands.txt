@@ -73,3 +73,6 @@ This command will display information about your NVIDIA GPU and the installed CU
 Step 4. Testing the Installation
 
 To further validate the installation, you can compile and run a simple CUDA program. NVIDIA provides sample codes in the CUDA Toolkit installation directory. Navigate to the samples directory and compile the deviceQuery sample:
+
+
+docker run -p 6379:6379 -d redis:5

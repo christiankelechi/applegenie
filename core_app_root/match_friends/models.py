@@ -23,6 +23,11 @@ class AskQuestionsToMatchModel(models.Model):
     def __str__(self):
         return f" Answered your question  on {self.prompt_in}"
     
-    
+
+class MatchFriend(models.Model):
+    user_email=models.TextField(null=True,blank=True)
+    user_partner_email=models.TextField(null=True,blank=True)
+    user_email_summary=models.TextField(null=True,blank=True)
+    user_partner_email_summary=models.TextField(null=True,blank=True)
 
     

@@ -51,6 +51,7 @@ class ChatClientModel(models.Model):
     
 
 class StoreUserChatModel(models.Model):
+    email=models.EmailField(null=True,blank=True)
     # user=models.ForeignKey(User,on_delete=models.CASCADE,blank=True,null=True)
     suggestion_question=models.TextField(null=True,blank=True)
     user_response=models.TextField(null=True,blank=True)
@@ -61,8 +62,36 @@ class StoreUserChatModel(models.Model):
     
 
 class QuestionAndAnswer(models.Model):
+    email=models.EmailField(null=True,blank=True)
     prompt_in=models.TextField(null=True,blank=True)
     prompt_output=models.TextField(null=True,blank=True)
     
     def __str__(self):
         return f"{self.user} question stored successfully "
+    
+    
+class UserQuestions(models.Model):
+    email=models.EmailField(null=True,blank=True)
+    user_questions=models.TextField(null=True,blank=True)
+
+class GenieQuestions(models.Model):
+    email=models.EmailField(null=True,blank=True)
+    genie_question=models.TextField(null=True,blank=True)
+
+class UserResponseToGenie(models.Model):
+    email=models.EmailField(null=True,blank=True)
+    user_response=models.TextField(null=True,blank=True)
+    
+class GenieResponseToUser(models.Model):
+    email=models.EmailField(null=True,blank=True)
+    genie_response=models.TextField(null=True,blank=True)
+    
+class UserHistory(models.Model):
+    email=models.EmailField(null=True,blank=True)
+    user_questions=models.TextField(null=True,blank=True)
+    genie_response_to_user=models.TextField(null=True,blank=True)
+    genie_suggestions_questions=models.TextField(null=True,blank=True)
+    user_response_to_genie=models.TextField(null=True,blank=True)
+    
+    def __str__(self):
+        return f"Total user summary updated successfully"

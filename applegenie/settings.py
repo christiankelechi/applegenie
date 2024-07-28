@@ -26,8 +26,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-3jnun&6pm_(9$icu*1wpeg7sy#w*v$fh=ktr3krcy76z!cl-0k"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-DEBUG = False
+DEBUG = True
+# DEBUG = False
 
 ALLOWED_HOSTS = ['.applematch.com','198.7.121.174','localhost','127.0.0.1']
 
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
+    "daphne",
     "django.contrib.staticfiles",
     "core_app_root",
     "core_app_root.apple_gifting",
@@ -54,7 +55,9 @@ INSTALLED_APPS = [
     "core_app_root.security",
     "core_app_root.security.user",
     "core_app_root.security.auth",
-    "core_app_root.image_recognition"
+    "core_app_root.image_recognition",
+    "channels",
+    
     
    
     
@@ -95,6 +98,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = "applegenie.wsgi.application"
+
+ASGI_APPLICATION = 'applegenie.asgi.application'
 
 AUTH_USER_MODEL="core_app_root_security_user.User"
 

@@ -5,8 +5,8 @@ from rest_framework import serializers
         
 class MatchFriendsSerializers(serializers.ModelSerializer):
     class Meta:
-        fields="__all__"
-        model=models.UserAttributes
+        fields=['user_email','user_partner_email']
+        model=models.MatchFriend
 
 class AskQuestionsToMatchSerializer(serializers.ModelSerializer):
     class Meta:
