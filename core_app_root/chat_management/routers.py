@@ -13,7 +13,7 @@ router.register(r'chat/store_user_chats',chat_management.StoreUserChatViewSet,ba
 router.register(r'chat/questionandanswer',question_and_answer.QuestionAndAnswerViewsets,basename='questionandanswer')
 router.register(r'chat/questionandanswer_main',question_and_answer.QuestionAndAnswerViewsetsMain,basename='questionandanswer_main')
 
-router.register(r'chat/aigeniesynopsis',question_and_answer.AiGenieSynopsisViewset,basename='aigeniesynopsis')
+
 
 
 

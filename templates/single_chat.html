@@ -1,0 +1,14 @@
+{% extends "web/base.html" %}
+{% block body %}
+<div id="chat-wrapper">
+  <div id="message-list">
+    <div class="chat-message is-system">
+      Hello, what can I help you with today?
+    </div>
+  </div>
+  <form id="chat-input-bar">
+    <input name="message" type="text" placeholder="Type your message..."
+    <button type="submit">{% translate "Send" %}</button>
+  </form>
+</div>
+{% endblock %} 

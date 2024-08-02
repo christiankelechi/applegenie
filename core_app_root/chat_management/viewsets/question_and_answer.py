@@ -15,6 +15,7 @@ from core_app_root.chat_management.viewsets.questionandanswer import chatRequest
 import requests
 from core_app_root import base_url
 from core_app_root.chat_management.models import StoreUserChatModel,GenieResponseToUser,UserResponseToGenie,GenieQuestions,UserQuestions
+from rest_framework.views import APIView
 
 def applegeniesynopsis():
     
@@ -40,11 +41,11 @@ def remove_special_symbols(text):
     pattern = r'[^a-zA-Z0-9\s]'
     # Use the sub() method to replace all non-alphanumeric characters with an empty string
     return re.sub(pattern, '', text)
-class AiGenieSynopsisViewset(viewsets.ModelViewSet):
-    http_method_names=['get']
-    def list(self,request):
+
+class AiGenieSynopsisViewset(APIView):
+    def get(self, request, *args, **kwargs):
         synopsis=applegeniesynopsis()
-        return Response({"status":True,"message":f" Hi {request.user}, {synopsis}"})
+        return Response({"status":True,"message":f" {synopsis}"},status=status.HTTP_200_OK)
 
 
 
@@ -78,10 +79,7 @@ class QuestionAndAnswerViewsetsMain(viewsets.ModelViewSet):
         try:
             serializer = self.serializer_class(data=request.data)
             if serializer.is_valid():
-                
-                # openai.api_key = os.getenv("OPENAI_API_KEY")
-                # prompt_output = str(asyncio.run(chatRequest(str(serializer.data['prompt_in']))))
-                # return Response({"message": "Question answered successfully", "prompt_response": prompt_output, "status": True, "data": serializer.data}, status=status.HTTP_200_OK)
+
                 prompt_in=str(serializer.data['prompt_in'])
                 email=str(serializer.data['email'])
                 response=requests.post(url=f"{base_url.main_url}/chat/questionandanswer/",json={"email":email,"prompt_in":prompt_in})

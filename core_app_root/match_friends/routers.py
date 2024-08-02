@@ -8,9 +8,3 @@ urlpatterns=[
     *router.urls
 ]
 
-router.register(r'human_interests',match_friends.HumanInterestsViewsets,basename='human_interests')
-
-
-urlpatterns=[
-    *router.urls
-]

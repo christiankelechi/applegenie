@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-import os
+
 import os
 from pathlib import Path
 from decouple import config, Csv
@@ -84,7 +84,7 @@ ROOT_URLCONF = "applegenie.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [os.path.join(BASE_DIR,'templates')],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -100,6 +100,15 @@ TEMPLATES = [
 WSGI_APPLICATION = "applegenie.wsgi.application"
 
 ASGI_APPLICATION = 'applegenie.asgi.application'
+
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels_redis.core.RedisChannelLayer",
+        "CONFIG": {
+            "hosts": [("127.0.0.1", 6379)],
+        },
+    },
+}
 
 AUTH_USER_MODEL="core_app_root_security_user.User"
 
