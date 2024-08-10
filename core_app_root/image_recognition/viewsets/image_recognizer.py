@@ -11,7 +11,7 @@ from rest_framework.permissions import IsAuthenticated,AllowAny
 class PhotoViewSet(viewsets.ModelViewSet):
     queryset = Photo.objects.all()
     serializer_class = PhotoSerializer
-    http_method_names=['post','get']
+    http_method_names=['post']
     permission_classes=[AllowAny]
     
     def create(self, request, *args, **kwargs):

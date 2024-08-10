@@ -19,25 +19,30 @@ class StoreUserChatViewSet(viewsets.ModelViewSet):
     permission_classes=[AllowAny]
     http_method_names=['post']
     def create(self,request):
-        serializer=self.serializer_class(data=request.data)
-        if serializer.is_valid():
-            email=str(serializer.validated_data['email'])
-            suggestion_question=str(serializer.validated_data['suggestion_question'])
-            user_response=str(serializer.validated_data['user_response'])
-    
-            # StoreUserChatModel.objects.create(email=email,suggestion_question=suggestion_question,user_response=user_response)
-            
-            GenieQuestions.objects.create(email=email,genie_question=suggestion_question)
-            UserResponseToGenie.objects.create(email=email,user_response=user_response)
+        try:
+            serializer=self.serializer_class(data=request.data)
+            if serializer.is_valid():
+                email=str(serializer.validated_data['email'])
+                suggestion_question=str(serializer.validated_data['suggestion_question'])
+                user_response=str(serializer.validated_data['user_response'])
+        
+                # StoreUserChatModel.objects.create(email=email,suggestion_question=suggestion_question,user_response=user_response)
+                
+                GenieQuestions.objects.create(email=email,genie_question=suggestion_question)
+                UserResponseToGenie.objects.create(email=email,user_response=user_response)
 
-            return Response({"status":True,"message":"User answered question asked by the Genie","response_data":{"data":serializer.validated_data}},status=status.HTTP_200_OK)   
-        else:
-            return Response({"status":True,"message":"Invalid data","response_data":{"data":serializer.data}},status=status.HTTP_400_BAD_REQUEST)   
+                return Response({"status":True,"message":"User answered question asked by the Genie","response_data":{"data":serializer.validated_data}},status=status.HTTP_200_OK)   
+            else:
+                return Response({"status":True,"message":"Invalid data","response_data":{"data":serializer.data}},status=status.HTTP_400_BAD_REQUEST)   
+        
+        except:
+            return Response({"status":False,"message":"Check Network and Try again later"},status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 class ChatManagementViewsets(viewsets.ViewSet):
     serializer_class = ChatManagement
     http_method_names = ['get']
-
+    permission_classes=[AllowAny]
+    
     def list(self, request):
         chat_client_model = ChatClientModel()  # Create an instance of ChatClientModel
         list_of_messages = chat_client_model.get_list_of_questions()
@@ -57,7 +62,7 @@ class QuestionAskByUser(viewsets.ModelViewSet):
         if serializer.is_valid():
             email=str(serializer.validated_data['email'])
             questions_ask_by_user=UserQuestions.objects.filter(email__icontains=email)
-            if len(questions_ask_by_user)<=50:
+            if len(questions_ask_by_user)<=30:
                 
                 user_questions = [history.user_questions for history in questions_ask_by_user]
                 
@@ -66,7 +71,7 @@ class QuestionAskByUser(viewsets.ModelViewSet):
                 return Response({"status":True,"response_data":{"total_user_questions":user_questions}},status=status.HTTP_200_OK)   
 
             else:
-                user_questions = [history.user_questions for history in questions_ask_by_user[:50]]
+                user_questions = [history.user_questions for history in questions_ask_by_user[-30:]]
                 return Response({"status":True,"response_data":{"total_user_questions":user_questions}},status=status.HTTP_200_OK)   
                     
                 
@@ -82,14 +87,14 @@ class QuestionAskByGenie(viewsets.ModelViewSet):
             email=str(serializer.validated_data['email'])
             questions_ask_by_genie=GenieQuestions.objects.filter(email__icontains=email)
             
-            if len(questions_ask_by_genie)<=50:
+            if len(questions_ask_by_genie)<=30:
                 genie_questions = [history.genie_question for history in questions_ask_by_genie]
                 
             
                 
                 return Response({"status":True,"response_data":{"total_user_questions":genie_questions}},status=status.HTTP_200_OK)   
             else:
-                genie_questions = [history.genie_question for history in questions_ask_by_genie[:50]]
+                genie_questions = [history.genie_question for history in questions_ask_by_genie[-30:]]
                 
             
                 
@@ -107,14 +112,14 @@ class QuestionAnsweredByUser(viewsets.ModelViewSet):
             email=str(serializer.validated_data['email'])
             questions_answered_by_user=UserResponseToGenie.objects.filter(email__icontains=email)
             
-            if len(questions_answered_by_user)<=50:
+            if len(questions_answered_by_user)<=30:
                 user_questions_answered = [history.user_response for history in questions_answered_by_user]
                 
             
                 
                 return Response({"status":True,"response_data":{"total_user_questions":user_questions_answered}},status=status.HTTP_200_OK)   
             else: 
-                user_questions_answered = [history.user_response for history in questions_answered_by_user[:50]]
+                user_questions_answered = [history.user_response for history in questions_answered_by_user[-30:]]
                 
             
                 
@@ -131,7 +136,7 @@ class QuestionAnsweredByGenie(viewsets.ModelViewSet):
             email=str(serializer.validated_data['email'])
             questions_answered_by_genie=GenieResponseToUser.objects.filter(email__icontains=email)
             
-            if len(questions_answered_by_genie)<=50:
+            if len(questions_answered_by_genie)<=30:
                 genie_questions_answered = [history.genie_response for history in questions_answered_by_genie]
             
             
@@ -139,7 +144,7 @@ class QuestionAnsweredByGenie(viewsets.ModelViewSet):
             
                 return Response({"status":True,"response_data":{"total_user_questions":genie_questions_answered}},status=status.HTTP_200_OK)   
             else:
-                genie_questions_answered = [history.genie_response for history in questions_answered_by_genie[:50]]
+                genie_questions_answered = [history.genie_response for history in questions_answered_by_genie[-30:]]
             
             
           

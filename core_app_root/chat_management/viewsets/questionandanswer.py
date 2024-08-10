@@ -13,7 +13,7 @@ def chatRequest(message):
 
     completion = client.chat.completions.create(
     model="gpt-4o",
-    max_tokens=150,
+    max_tokens=200,
     messages=[
         {"role": "system", "content": "You are a helpful assistant."},
         {"role": "user", "content": f" {message} just make this straight to point  no much talk please and also try to be direct in your reply addressing main important things in the question, without explaining each ..just list key things "}

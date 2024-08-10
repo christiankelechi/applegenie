@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.utils import timezone
 # Create your models here.
 class UserAttributes(models.Model):
     GENDER_MALE = 'male'
@@ -31,3 +31,7 @@ class MatchFriend(models.Model):
     user_partner_email_summary=models.TextField(null=True,blank=True)
 
     
+class MatchedFriend(models.Model):
+    user_email=models.TextField(null=True,blank=True)
+    user_partner_email=models.TextField(null=True,blank=True)
+    time_matched=models.DateTimeField(auto_now=True)
