@@ -47,7 +47,7 @@ def remove_special_symbols(text):
 class AiGenieSynopsisViewset(APIView):
     def get(self, request, *args, **kwargs):
         try:
-            prompt_in="just ask single question to know more about the user , this is a dating app so ask randomly about love ..and let it be single question at a time,just a single question at time ..it can be from love,sports,types of  friends one want to have"
+            prompt_in="just ask single question to know more about the user , this is a dating app so ask randomly about love ..and let it be single question at a time,just a single question at time ..it can be from love,sports,types of  friends one want to have ,just make sure to have a varieties one at a time  , and just give it the question ..no much sentence just straight to the point"
             email="dev.applematch@gmail.com"
             response=requests.post(url=f"{base_url.main_url}/chat/questionandanswer/",json={"email":"leoriza@gmail.com","prompt_in":prompt_in})
                     

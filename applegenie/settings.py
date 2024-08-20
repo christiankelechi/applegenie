@@ -1,3 +1,4 @@
+
 """
 Django settings for apple_genie project.
 
@@ -56,6 +57,7 @@ INSTALLED_APPS = [
     "core_app_root.security.user",
     "core_app_root.security.auth",
     "core_app_root.image_recognition",
+    "core_app_root.image_kyc",
     "channels",
     
     
@@ -242,3 +244,5 @@ EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend" # new
 SITE_ID = 1 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+FILE_UPLOAD_MAX_MEMORY_SIZE = 100 * 1024 * 1024 # (3MEGABYTES)
+DATA_UPLOAD_MAX_MEMORY_SIZE = FILE_UPLOAD_MAX_MEMORY_SIZE
