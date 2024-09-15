@@ -47,14 +47,26 @@ def remove_special_symbols(text):
 class AiGenieSynopsisViewset(APIView):
     def get(self, request, *args, **kwargs):
         try:
-            prompt_in="just ask single question to know more about the user , this is a dating app so ask randomly about love ..and let it be single question at a time,just a single question at time ..it can be from love,sports,types of  friends one want to have ,just make sure to have a varieties one at a time  , and just give it the question ..no much sentence just straight to the point"
+            prompt_in=str(["What activities do you enjoy in your free time?","Do you have any favorite books, movies, or TV shows?","What are you looking for in a relationship?","Describe your ideal partner.","How do you typically spend your weekends?","What values are most important to you in a partner?",
+    "Do you enjoy traveling? If so, what's your favorite destination?",
+    "Are you more of a beach person or a mountain person?",
+    "Do you prefer nights out or cozy evenings at home?",
+    "What's your favorite type of cuisine?",
+    "Tell us a bit about your background and upbringing.",
+    "Are there any cultural traditions that are important to you?",
+    "Where do you see yourself in the next five years?",
+    "What are some goals you are currently working towards?",
+    "If you could have dinner with any historical figure, who would it be and why?",
+    "What's a fun fact about you that most people don't know?",
+    "What type of apple best describes your personality and why?",
+    "If you could gift an apple to anyone in history, who would it be and why?"])+str("using the above as dataset randomly ask question from it and also return a single question at a time  randomly concerning dating and all life question relating to dating ,love and personal relationship")
             email="dev.applematch@gmail.com"
             response=requests.post(url=f"{base_url.main_url}/chat/questionandanswer/",json={"email":"leoriza@gmail.com","prompt_in":prompt_in})
                     
             return Response({"status":True,"message":f" {response.json()['prompt_response']}"},status=status.HTTP_200_OK)
 
         except:
-            return Response({"status":True,"message":f"Internal server error, check your network and try again"},status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+            return Response({"status":False,"message":f"Internal server error, check your network and try again"},status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
 class QuestionAndAnswerViewsets(viewsets.ModelViewSet):

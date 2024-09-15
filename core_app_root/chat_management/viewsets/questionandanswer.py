@@ -9,11 +9,12 @@ def chatRequest(message):
     import openai
 
     openai.api_key = os.getenv("OPENAI_API_KEY")
-    client = OpenAI()
+    # client = OpenAI(api_key=openai.api_key)
 
-    completion = client.chat.completions.create(
+    completion = openai.chat.completions.create(
     model="gpt-4o",
     max_tokens=200,
+    temperature=0.8,
     messages=[
         {"role": "system", "content": "You are a helpful assistant."},
         {"role": "user", "content": f" {message} just make this straight to point  no much talk please and also try to be direct in your reply addressing main important things in the question, without explaining each ..just list key things "}

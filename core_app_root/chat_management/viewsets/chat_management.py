@@ -71,7 +71,8 @@ class QuestionAskByUser(viewsets.ModelViewSet):
                 return Response({"status":True,"response_data":{"total_user_questions":user_questions}},status=status.HTTP_200_OK)   
 
             else:
-                user_questions = [history.user_questions for history in questions_ask_by_user[-30:]]
+                # user_questions = [history.user_questions for history in questions_ask_by_user[-30:]]
+                user_questions = [history.user_questions for history in questions_ask_by_user.order_by('-id')[:30]]
                 return Response({"status":True,"response_data":{"total_user_questions":user_questions}},status=status.HTTP_200_OK)   
                     
                 
@@ -94,7 +95,7 @@ class QuestionAskByGenie(viewsets.ModelViewSet):
                 
                 return Response({"status":True,"response_data":{"total_user_questions":genie_questions}},status=status.HTTP_200_OK)   
             else:
-                genie_questions = [history.genie_question for history in questions_ask_by_genie[-30:]]
+                genie_questions = [history.genie_question for history in questions_ask_by_genie.order_by('-id')[:30]]
                 
             
                 
@@ -119,7 +120,7 @@ class QuestionAnsweredByUser(viewsets.ModelViewSet):
                 
                 return Response({"status":True,"response_data":{"total_user_questions":user_questions_answered}},status=status.HTTP_200_OK)   
             else: 
-                user_questions_answered = [history.user_response for history in questions_answered_by_user[-30:]]
+                user_questions_answered = [history.user_response for history in questions_answered_by_user.order_by('-id')[:30]]
                 
             
                 
@@ -144,7 +145,7 @@ class QuestionAnsweredByGenie(viewsets.ModelViewSet):
             
                 return Response({"status":True,"response_data":{"total_user_questions":genie_questions_answered}},status=status.HTTP_200_OK)   
             else:
-                genie_questions_answered = [history.genie_response for history in questions_answered_by_genie[-30:]]
+                genie_questions_answered = [history.genie_response for history in questions_answered_by_genie.order_by('-id')[:30]]
             
             
           
