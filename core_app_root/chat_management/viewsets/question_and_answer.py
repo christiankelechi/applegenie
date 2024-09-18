@@ -79,7 +79,7 @@ class QuestionAndAnswerViewsets(viewsets.ModelViewSet):
             serializer = self.serializer_class(data=request.data)
             if serializer.is_valid():
                 
-                openai.api_key = os.getenv("OPENAI_API_KEY")
+              
                 prompt_output = str(chatRequest(str(serializer.data['prompt_in'])))
                 return Response({"message": "Question answered successfully", "prompt_response": prompt_output, "status": True, "data": serializer.data}, status=status.HTTP_200_OK)
             else:
