@@ -30,7 +30,7 @@ SECRET_KEY = "django-insecure-3jnun&6pm_(9$icu*1wpeg7sy#w*v$fh=ktr3krcy76z!cl-0k
 DEBUG = True
 # DEBUG = False
 
-ALLOWED_HOSTS = ['.applematch.com','198.7.121.174','localhost','127.0.0.1']
+ALLOWED_HOSTS = ['.applematch.com','198.7.121.174','localhost','127.0.0.1','dev.flood.at']
 
 
 # Application definition
@@ -59,11 +59,8 @@ INSTALLED_APPS = [
     "core_app_root.image_recognition",
     "core_app_root.image_kyc",
     "channels",
-    
-    
-   
-    
-    
+    "core_app_root.calls_management",
+    "core_app_root.user_db_communication"    
 ]
 
 MIDDLEWARE = [
@@ -107,7 +104,7 @@ CHANNEL_LAYERS = {
     "default": {
         "BACKEND": "channels_redis.core.RedisChannelLayer",
         "CONFIG": {
-            "hosts": [("127.0.0.1", 6379)],
+            "hosts": [("127.0.0.1", 1234),('aigenie.applematch.com'),('localhost',8000)],
         },
     },
 }

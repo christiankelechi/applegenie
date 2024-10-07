@@ -1,5 +1,5 @@
 from rest_framework import viewsets
-from core_app_root.match_friends.serializers.matched_frieds import MatchedFriendSerializer
+from core_app_root.match_friends.serializers.matched_friends import MatchedFriendSerializer
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.views import APIView
@@ -15,9 +15,20 @@ class MatchedFriendViewset(viewsets.ModelViewSet):
             if serializer.is_valid():
                 user_email=serializer.validated_data['user_email']
                 user_partner_email=serializer.validated_data['user_partner_email']
-                serializer.save()
                 
-                return Response({"status":True,"message":"Matched successfully","users_matched":{"male":user_email,"female":user_partner_email}},status=status.HTTP_200_OK)
+                if serializer.validated_data['swipe_right']==True:
+            
+                    serializer.save()
+                    return Response({"status":True,"message":"Matched successfully","users_matched":{"male":user_email,"female":user_partner_email}},status=status.HTTP_200_OK)
+                elif serializer.validated_data['swipe_left'] ==True:
+                  
+                    return Response({"status":True,"message":"Matching not accepted by the user"},status=status.HTTP_200_OK)
+                else:
+                    return Response({"status":True,"message":"Matching not accepted"},status=status.HTTP_200_OK)
+                    
+                    
+                
+                # return Response({"status":True,"message":"Matched successfully","users_matched":{"male":user_email,"female":user_partner_email}},status=status.HTTP_200_OK)
             else:
                 return Response({"status":False,"message":"Invalid data sent","users_matched":None},status=status.HTTP_400_BAD_REQUEST)
             

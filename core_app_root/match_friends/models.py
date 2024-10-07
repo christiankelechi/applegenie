@@ -34,4 +34,7 @@ class MatchFriend(models.Model):
 class MatchedFriend(models.Model):
     user_email=models.TextField(null=True,blank=True)
     user_partner_email=models.TextField(null=True,blank=True)
+    swipe_right=models.BooleanField(null=True,blank=True,default=False)
+    swipe_left=models.BooleanField(null=True,blank=True,default=False)
     time_matched=models.DateTimeField(auto_now=True)
+    

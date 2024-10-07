@@ -12,6 +12,8 @@ from django.http import Http404
 from django.core.exceptions import ObjectDoesNotExist
 # Create your models here.
 import hashlib
+from django.contrib.postgres.fields import ArrayField
+
 class UserManager(BaseUserManager):
     def get_object_by_public_id(self, public_id):
         try:
@@ -20,7 +22,7 @@ class UserManager(BaseUserManager):
         except (ObjectDoesNotExist, ValueError, TypeError):
             return Http404
 
-    def create_user(self, username, email, password=None, **kwargs):
+    def create_user(self, email, password=None, **kwargs):
         """Create and return a `User` with an email, phone number, username and password."""
         # if username is None:
         #     raise TypeError('Users must have a username.')
@@ -30,7 +32,7 @@ class UserManager(BaseUserManager):
         if password is None:
             raise TypeError('User must have an email.')
 
-        user = self.model(username=username, email=self.normalize_email(email), **kwargs)
+        user = self.model(email=self.normalize_email(email), **kwargs)
         user.set_password(password)
         user.save(using=self._db)
 
@@ -89,3 +91,46 @@ class User(AbstractBaseUser, PermissionsMixin):
     
     # def __str__(self):
     #     return str(self.full_name)
+
+
+class Image(models.Model):
+    file_title=models.CharField(max_length=2000,)
+    image = models.FileField(upload_to='images/')  # or ImageField
+
+
+
+class OnboardingUserDetails(models.Model):
+    user=models.ForeignKey(User,on_delete=models.CASCADE,blank=True,null=True)
+    interests = ArrayField(
+        models.CharField(max_length=100000, blank=True),
+         
+    )
+    images = models.ManyToManyField(Image, related_name='models',blank=True)
+    gender=models.CharField(max_length=200,blank=True)
+    primary_interest=models.TextField()
+    height=models.CharField(max_length=10000,blank=True)
+    opening_move=models.TextField()
+    dob=models.DateField(blank=True)
+    values=ArrayField(
+      models.CharField(max_length=100000,blank=True),
+    )
+    habits=ArrayField(
+      models.CharField(max_length=100000,blank=True)
+    )
+    family_planning=ArrayField(
+      models.CharField(max_length=100000,blank=True)
+    )
+    beliefs=ArrayField(
+      models.CharField(max_length=100000,blank=True)
+    )
+    communities=ArrayField(
+      models.CharField(max_length=100000,blank=True)
+    )
+
+""""{
+ 
+
+  "communities": [
+    "string"
+  ]
+}"""

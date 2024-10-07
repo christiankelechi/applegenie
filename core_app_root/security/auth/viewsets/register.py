@@ -56,11 +56,11 @@ class RegisterViewSet(viewsets.ModelViewSet):
         print(request.data)
         serializer = self.serializer_class(data=request.data)
         email=str(serializer.initial_data['email'])
-        username=str(serializer.initial_data['username'])
+        username=str(serializer.initial_data['email'])
         # print(serializer.initial_data['password'])
         password_length=int(len(serializer.initial_data['password']))
         print(password_length)
-        print(type(password_length))
+        # print(type(password_length))
         error_list={}
         if not serializer.is_valid():
             print("not valid")

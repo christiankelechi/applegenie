@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required
 
 
 def index(request):
-    return render(request, "chat/index.html")
+    return render(request, "index.html")
 
 
 def room(request, room_name):
