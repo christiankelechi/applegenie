@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 from django_countries.fields import CountryField
-
+from phonenumber_field.modelfields import PhoneNumberField
 # Create your models here.
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser,BaseUserManager,PermissionsMixin
@@ -38,7 +38,7 @@ class UserManager(BaseUserManager):
 
         return user
 
-    def create_superuser(self, username, email, password, **kwargs):
+    def create_superuser(self, email, password, **kwargs):
         """
         Create and return a `User` with superuser (admin) permissions.
         """
@@ -49,7 +49,7 @@ class UserManager(BaseUserManager):
         # if username is None:
         #     raise TypeError('Superusers must have an username.')
 
-        user = self.create_user(username, email, password, **kwargs)
+        user = self.create_user(email, password, **kwargs)
         user.is_superuser = True
         user.is_staff = True
         user.save(using=self._db)
@@ -100,7 +100,7 @@ class Image(models.Model):
 
 
 class OnboardingUserDetails(models.Model):
-    user=models.ForeignKey(User,on_delete=models.CASCADE,blank=True,null=True)
+    user=models.OneToOneField(User,on_delete=models.CASCADE,blank=True,null=True)
     interests = ArrayField(
         models.CharField(max_length=100000, blank=True),
          
@@ -126,7 +126,26 @@ class OnboardingUserDetails(models.Model):
     communities=ArrayField(
       models.CharField(max_length=100000,blank=True)
     )
+    name=models.CharField(max_length=1000,blank=True)
+    phone = PhoneNumberField(unique=True,blank=True)
+    current_location=models.CharField(max_length=2000,blank=True,null=True)
+    language=models.CharField(max_length=1000,blank=True,null=True)
+    preference=ArrayField(
+      models.CharField(max_length=100000,blank=True,null=True),
+      null=True,blank=True,
+    )
+    region=models.CharField(max_length=2000,blank=True)
+    
+    
+    def __str__(self):
+        return f"{self.user} have completed onboarding stage"
 
+
+class PurchaseLog(models.Model):
+    apple_purchase_logs = models.JSONField()
+
+    def __str__(self):
+        return f"Purchase Logs: {self.apple_purchase_logs}"
 """"{
  
 
