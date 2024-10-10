@@ -5,4 +5,6 @@ class OnboardingUserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model=OnboardingUserDetails
-        fields="__all__"  
+        fields=['interests','gender','primary_interest','height','opening_move','dob','values','habits','family_planning','beliefs','communities','name','phone','current_location','language','preference','region']  
+ 
+    

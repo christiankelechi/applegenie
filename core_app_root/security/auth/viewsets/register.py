@@ -30,6 +30,7 @@ from core_app_root.security.auth.serializer.register import RegisterSerializer
 from core_app_root.security.user.models import User
 from django.utils import timezone
 from drf_yasg.utils import swagger_auto_schema
+from core_app_root.apple_gifting.models import AppleGiftingModel,AppleModel
 # from core.wallet.models import UsdModel
 from core_app_root.security.auth.serializer.verify_serializer import VerifySerializer
 @swagger_auto_schema(
@@ -130,6 +131,7 @@ class RegisterViewSet(viewsets.ModelViewSet):
             }
             serializer_data = serializer.data.copy()  # Create a copy of the serializer data
             serializer_data.pop('confirm_password', None) 
+
             return Response({
                 "user": serializer_data,
                 "refresh": res["refresh"],

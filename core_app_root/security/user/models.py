@@ -105,7 +105,7 @@ class OnboardingUserDetails(models.Model):
         models.CharField(max_length=100000, blank=True),
          
     )
-    images = models.ManyToManyField(Image, related_name='models',blank=True)
+    # images = models.ManyToManyField(Image, related_name='models',blank=True)
     gender=models.CharField(max_length=200,blank=True)
     primary_interest=models.TextField()
     height=models.CharField(max_length=10000,blank=True)
