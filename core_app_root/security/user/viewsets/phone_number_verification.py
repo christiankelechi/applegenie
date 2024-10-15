@@ -38,11 +38,12 @@ class PhoneNumberModelViewset(ModelViewSet):
                 # Twilio logic or other business logic
                 account_sid = os.environ['TWILIO_ACCOUNT_SID']
                 auth_token = os.environ['TWILIO_AUTH_TOKEN']
+                message_service_sid=os.environ['MESSAGE_SERVICE_SID']
                 code = generate_random_code()
                 
                 client = Client(account_sid, auth_token)
                 message = client.messages.create(
-                    messaging_service_sid='MGd3e80beddacf966cdc38cd118c37c808',
+                    messaging_service_sid=message_service_sid,
                     body=f'Your OTP verification code for Finders Keepers app is {code}',
                     to=str(serializer.validated_data['phone'])
                 )
