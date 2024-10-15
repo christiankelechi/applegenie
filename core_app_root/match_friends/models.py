@@ -1,5 +1,7 @@
 from django.db import models
 from django.utils import timezone
+from django.contrib.postgres.fields import ArrayField
+
 # Create your models here.
 class UserAttributes(models.Model):
     GENDER_MALE = 'male'
@@ -38,3 +40,18 @@ class MatchedFriend(models.Model):
     swipe_left=models.BooleanField(null=True,blank=True,default=False)
     time_matched=models.DateTimeField(auto_now=True)
     
+
+class FilterMatches(models.Model):
+    
+    interested_in=models.CharField(max_length=200,null=True,blank=True)
+    language=models.CharField(max_length=300,null=True,blank=True)
+    age_range=models.CharField(max_length=300,null=True,blank=True)
+    amount_of_apples=models.CharField(max_length=300,null=True,blank=True)
+    travel_mode=models.CharField(default=False,null=True,blank=True)
+    distance_range=models.CharField(default=False,null=True,blank=True)
+    interests= ArrayField(
+      models.CharField(max_length=100000,blank=True)
+    )
+
+    def __str__(self):
+        return "Filtering performed successfuly"

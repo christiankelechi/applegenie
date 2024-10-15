@@ -17,9 +17,10 @@ class AppleModel(models.Model):
     user=models.OneToOneField(User,on_delete=models.CASCADE)
     rotting_apples=models.FloatField(default=0,null=True)
     apple_recieved=models.FloatField(default=0,null=True)
+    total_apple_sent=models.FloatField(default=0,null=True)
     accepted_apple=models.FloatField(default=0,null=True)
     is_expired=models.BooleanField(default=False,null=True)
-    bucket_of_apple=models.FloatField(default=100,null=True)
+    bucket_of_apple=models.FloatField(default=10,null=True)
 
 
     def __str__(self):

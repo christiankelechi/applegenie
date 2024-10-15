@@ -16,5 +16,6 @@ class UserViewset(viewsets.ModelViewSet):
     
     def get_object(self):
         obj=User.objects.get_object_by_public_id(self.kwargs['pk'])
+        
         self.check_object_permissions(self.request,obj)
         return obj

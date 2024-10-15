@@ -101,6 +101,7 @@ class UserImageKycViewset(viewsets.ModelViewSet):
     detector = dlib.get_frontal_face_detector()
     predictor = dlib.shape_predictor('ai_libraries/dlib/shape_predictor_68_face_landmarks.dat')
     face_recognition_model = dlib.face_recognition_model_v1('ai_libraries/dlib/dlib_face_recognition_resnet_model_v1.dat')
+    
 
     def preprocess_image(self, img_array):
         # Convert the image array to RGB if needed (OpenCV loads images in BGR by default)

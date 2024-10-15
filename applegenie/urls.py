@@ -57,6 +57,11 @@ urlpatterns = [
     path('image_recognition/',include(('core_app_root.image_recognition.routers','core_app_root.image_recognition'))),
     
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
+    path('silk/',include('silk.urls',namespace='silk')),
+    path("pricing-page/", views.pricing_page, name="pricing_page"),
+    path("subscription-confirm/", views.subscription_confirm, name="subscription_confirm"),
+    path('stripe/', include('djstripe.urls', namespace='djstripe')),
+    
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

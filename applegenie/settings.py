@@ -12,7 +12,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-
+from dotenv import load_dotenv
+load_dotenv()
 import os
 from pathlib import Path
 from decouple import config, Csv
@@ -61,10 +62,14 @@ INSTALLED_APPS = [
     "core_app_root.image_kyc",
     "channels",
     "core_app_root.calls_management",
-    "core_app_root.user_db_communication"    
+    "core_app_root.user_db_communication",
+    "background_task",
+    "silk",
+    "djstripe",  
 ]
 
 MIDDLEWARE = [
+    'silk.middleware.SilkyMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'corsheaders.middleware.CorsMiddleware',
@@ -238,6 +243,28 @@ CORS_ALLOW_ALL_ORIGINS = True
 #     "https://www.cbastudyapp.com",
 #     'http://127.0.0.1:5500',
 #     'http://localhost:8000'
+CRONJOBS = [
+    ('* * * * *', 'core_app_root.my_cron_job.my_cron_job')
+]
+# settings.py
+from celery.schedules import crontab
+
+CELERY_BEAT_SCHEDULE = {
+    'run-every-minute': {
+        'task': 'core_app_root.tasks.my_cron_job',
+        'schedule': crontab(),  # This runs every minute
+    },
+}
+
+STRIPE_TEST_PUBLIC_KEY=os.environ['STRIPE_TEST_PUBLIC_KEY']
+STRIPE_TEST_PRIVATE_KEY=os.environ['STRIPE_TEST_SECRET_KEY']
+# STRIPE_WEBHOOK_SECRET=''
+STRIPE_LIVE_MODE = False
+DJSTRIPE_WEBHOOK_SECRET = os.environ['DJSTRIPE_WEBHOOK_SECRET']
+DJSTRIPE_FOREIGN_KEY_TO_FIELD = "id"
+STRIPE_PRICING_TABLE_ID=os.environ['STRIPE_PRICING_TABLE_ID']
+DJSTRIPE_WEBHOOK_VALIDATION='retrieve_event'
+# '*/2 * * * *' every 2nd minute of each hour.
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend" # new
 SITE_ID = 1 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

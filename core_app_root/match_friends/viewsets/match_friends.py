@@ -12,6 +12,71 @@ import requests
 from core_app_root import base_url as bu
 from rest_framework.permissions import AllowAny
 
+import json
+import os
+import torch
+from sentence_transformers import SentenceTransformer
+
+from core_app_root.security.user.models import OnboardingUserDetails
+
+# Load the DistilBERT model fine-tuned for semantic textual similarity
+model = SentenceTransformer('distilbert-base-nli-stsb-mean-tokens')
+
+# Load user fixtures from JSON file
+# with open('scripts/newusers.json', 'r') as f:
+    # user_data = json.load(f)
+# total_onboarding=OnboardingUserDetails.objects.all()
+
+# # Ensure the output directory exists
+# output_dir = 'scripts/user_dataset'
+# os.makedirs(output_dir, exist_ok=True)
+
+# # Process each user profile
+# for current_user in total_onboarding:
+#     user_email = current_user.user.email
+    
+#     # Create a profile string based on user details
+#     profile_description = (
+#         f"Name: {current_user['fields']['name']}, "
+#         f"Interests: {', '.join(current_user['fields']['interests'])}, "
+#         f"Gender: {current_user['fields']['gender']}, "
+#         f"Primary Interest: {current_user['fields']['primary_interest']}, "
+#         f"Height: {current_user['fields']['height']}, "
+#         f"Opening Move: {current_user['fields']['opening_move']}, "
+#         f"DOB: {current_user['fields']['dob']}, "
+#         f"Location: {current_user['fields']['current_location']}, "
+#         f"Language: {current_user['fields']['language']}, "
+#         f"Bio: {current_user['fields']['bio']}, "
+#         f"Education: {current_user['fields']['education']}, "
+
+#         f"Preference: {', '.join(current_user['fields']['preference'])}, "
+#         f"Region: {current_user['fields']['region']}"
+#     )
+
+#     # Generate embedding for the user profile
+#     embedding = model.encode([profile_description])
+
+#     # Save the embedding to a .pth file
+#     file_path = os.path.join(output_dir, f'user_{user_email}_embedding.pth')
+#     torch.save(embedding, file_path)
+#     print(f"Saved embedding for User ID {user_email} to {file_path}")
+
+# # To read an embedding by user ID
+# def load_user_embedding(user_id):
+#     file_path = os.path.join(output_dir, f'user_{user_id}_embedding.pth')
+#     if os.path.exists(file_path):
+#         return torch.load(file_path)
+#     else:
+#         raise FileNotFoundError(f"No embedding file found for User ID {user_id}.")
+
+# # Example of loading a user embedding
+# try:
+#     user_embedding = load_user_embedding(1)  # Replace 1 with the desired user ID
+#     print(f"Loaded embedding for User ID 1: {user_embedding}")
+# except FileNotFoundError as e:
+#     print(e)
+
+
 class HumanInterestsViewsets(viewsets.ViewSet):
     serializer_class=HumanInterestSerializer
 

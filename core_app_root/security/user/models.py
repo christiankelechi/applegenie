@@ -93,18 +93,29 @@ class User(AbstractBaseUser, PermissionsMixin):
     #     return str(self.full_name)
 
 
-class Image(models.Model):
-    file_title=models.CharField(max_length=2000,)
-    image = models.FileField(upload_to='images/')  # or ImageField
+# class Image(models.Model):
+#     file_title=models.CharField(max_length=2000,)
+#     image = models.FileField(upload_to='images/')  # or ImageField
 
-
+class PhoneNumbersModel(models.Model):
+    user=models.OneToOneField(User,on_delete=models.CASCADE,related_name='user_phone_numbers',blank=True,null=True)
+    phone = models.CharField(blank=True,null=True)
+    code=models.CharField(blank=True,null=True)
+    
+    
+    
 
 class OnboardingUserDetails(models.Model):
+    # profile_photo=models.FileField(upload_to='kyc_images',blank=True,null=True)
+    home_town=models.TextField(blank=True,null=True)
+    education=models.TextField(blank=True,null=True)
+    bio=models.TextField(null=True,blank=True) 
     user=models.OneToOneField(User,on_delete=models.CASCADE,blank=True,null=True)
     interests = ArrayField(
         models.CharField(max_length=100000, blank=True),
          
     )
+    
     # images = models.ManyToManyField(Image, related_name='models',blank=True)
     gender=models.CharField(max_length=200,blank=True)
     primary_interest=models.TextField()
@@ -127,7 +138,6 @@ class OnboardingUserDetails(models.Model):
       models.CharField(max_length=100000,blank=True)
     )
     name=models.CharField(max_length=1000,blank=True)
-    phone = PhoneNumberField(unique=True,blank=True)
     current_location=models.CharField(max_length=2000,blank=True,null=True)
     language=models.CharField(max_length=1000,blank=True,null=True)
     preference=ArrayField(

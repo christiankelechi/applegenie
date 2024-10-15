@@ -51,7 +51,7 @@ class AppleGiftingViewset(viewsets.ModelViewSet):
                     sender_user=AppleModel.objects.get(user__email=str(sender))
 
                     sender_user.bucket_of_apple=float(sender_user.bucket_of_apple)-float(number_of_apples)
-                    
+                    sender_user.total_apple_sent=float(sender_user.total_apple_sent)+float(number_of_apples)
                     sender_user.save()
                     serializer.save()
                     context={"status":True,"message":f"{sender} sent across {number_of_apples} apples to {reciever}" }

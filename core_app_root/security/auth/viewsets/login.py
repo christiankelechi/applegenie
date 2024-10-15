@@ -25,7 +25,7 @@ class LoginViewSet(viewsets.ModelViewSet):
             if valid_user.is_active==False:
                 return Response({"error_message":"You have to activate your account first","status":False}, status=status.HTTP_400_BAD_REQUEST)
             else:
-                return Response(serializer.validated_data, status=status.HTTP_200_OK)
+                return Response({"data":serializer.validated_data,"message":"Login successfully"}, status=status.HTTP_200_OK)
                 # return HttpResponseRedirect(f"{base_url.main_url}/library/dashboard/")
         else:
             return Response({'error_msg':'User  with that email or password does not exist','status':False},status=status.HTTP_401_UNAUTHORIZED)
