@@ -13,6 +13,7 @@ from django.core.exceptions import ObjectDoesNotExist
 # Create your models here.
 import hashlib
 from django.contrib.postgres.fields import ArrayField
+# from core_app_root.apple_gifting.models import AppleModel
 
 class UserManager(BaseUserManager):
     def get_object_by_public_id(self, public_id):
@@ -103,7 +104,33 @@ class PhoneNumbersModel(models.Model):
     code=models.CharField(blank=True,null=True)
     
     
-    
+from django.db import models
+
+# Create your models here.
+class AppleGiftingModel(models.Model):
+    number_of_apples=models.IntegerField(blank=True,null=True)
+    sender=models.EmailField(blank=True,null=True)
+
+    reciever=models.EmailField(blank=True,null=True)
+    reciever_accepts=models.BooleanField(default=False,null=True,blank=True)
+    reciever_rejects=models.BooleanField(default=False,null=True,blank=True)
+
+
+    def __str__(self):
+        return f"{self.sender} sent total of {self.number_of_apples} apples to {self.reciever}"
+
+class AppleModel(models.Model):
+    user=models.OneToOneField(User,on_delete=models.CASCADE)
+    rotting_apples=models.FloatField(default=0,null=True)
+    apple_recieved=models.FloatField(default=0,null=True)
+    total_apple_sent=models.FloatField(default=0,null=True)
+    accepted_apple=models.FloatField(default=0,null=True)
+    is_expired=models.BooleanField(default=False,null=True)
+    bucket_of_apple=models.FloatField(default=10,null=True)
+
+
+    def __str__(self):
+        return f"{self.user} Apple Profile Details" 
 
 class OnboardingUserDetails(models.Model):
     # profile_photo=models.FileField(upload_to='kyc_images',blank=True,null=True)
@@ -156,10 +183,9 @@ class PurchaseLog(models.Model):
 
     def __str__(self):
         return f"Purchase Logs: {self.apple_purchase_logs}"
-""""{
- 
-
-  "communities": [
-    "string"
-  ]
-}"""
+        
+class UserProfileSummary(models.Model):
+    user_onboarding_details=models.ForeignKey(OnboardingUserDetails,on_delete=models.CASCADE)
+    user_auth_details=models.ForeignKey(User,on_delete=models.CASCADE)
+    phone_number_detail=models.ForeignKey(PhoneNumbersModel,on_delete=models.CASCADE)
+    apple_details=models.ForeignKey(AppleModel,on_delete=models.CASCADE)

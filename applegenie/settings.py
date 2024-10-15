@@ -192,8 +192,13 @@ USE_TZ = True
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
-STATIC_URL = 'static/'
-STATIC_ROOT=os.path.join(BASE_DIR,'static')
+STATIC_URL = '/static/'
+# STATICFILES_DIRS=[os.path.join(BASE_DIR,'static'),]
+# STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL='media/'
 MEDIA_ROOT=os.path.join(BASE_DIR,'media')
@@ -265,9 +270,18 @@ DJSTRIPE_FOREIGN_KEY_TO_FIELD = "id"
 STRIPE_PRICING_TABLE_ID=os.environ['STRIPE_PRICING_TABLE_ID']
 DJSTRIPE_WEBHOOK_VALIDATION='retrieve_event'
 # '*/2 * * * *' every 2nd minute of each hour.
-EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend" # new
+# EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend" # new
 SITE_ID = 1 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 FILE_UPLOAD_MAX_MEMORY_SIZE = 100 * 1024 * 1024 # (3MEGABYTES)
 DATA_UPLOAD_MAX_MEMORY_SIZE = FILE_UPLOAD_MAX_MEMORY_SIZE
+
+# Email Setup
+# EMAIL_BACKEND="django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST="c76592.sgvps.net"
+EMAIL_PORT=465
+EMAIL_HOST_USER = "support@finderskeepers.ai"
+EMAIL_HOST_PASSWORD="}ur^81*1kll%"
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = True

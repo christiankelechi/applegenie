@@ -2,9 +2,9 @@ from rest_framework import viewsets
 from core_app_root.apple_gifting.serializers import apple_gifting
 from rest_framework import status
 from rest_framework.response import Response
-from core_app_root.apple_gifting import models
+from core_app_root.security.user import models
 from rest_framework.permissions import AllowAny,IsAuthenticated
-from core_app_root.apple_gifting.models import AppleModel,AppleGiftingModel
+from core_app_root.security.user.models import AppleModel,AppleGiftingModel
 class AppleGiftingViewset(viewsets.ModelViewSet):
     http_method_names=['get','post']
     serializer_class=apple_gifting.AppleGiftingSerializer

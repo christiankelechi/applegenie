@@ -1,4 +1,5 @@
 import django.contrib
+from django.conf import settings
 from core_app_root.security import base_url
 from django.shortcuts import redirect
 from rest_framework import viewsets
@@ -8,12 +9,14 @@ from django.http import HttpResponseRedirect
 import random
 import string
 from django.views import View
+from django.templatetags.static import static
 from rest_framework.response import Response
 import resend
 from core_app_root.security.auth.utils import generate_token
 from django.utils.encoding import force_bytes,DjangoUnicodeDecodeError,force_str
 from rest_framework.viewsets import ViewSet
 from rest_framework import viewsets
+from rest_framework.parsers import JSONParser
 from rest_framework.permissions import AllowAny
 from rest_framework import status
 from django.contrib import messages
@@ -22,6 +25,8 @@ from django.template.loader import render_to_string
 from django.contrib.sites.shortcuts import get_current_site
 from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from core_app_root.security.auth.serializer.register import RegisterSerializer
+from django.core.mail import send_mail
+from django.utils.html import strip_tags
 # from email_msg_generator.models import OpenAiAdminModel,OpenAiUserModel
 # from services.aichat.models im# The commented out lines in the code are likely imports that are not
 # currently being used in the codebase. These lines are usually kept
@@ -30,7 +35,7 @@ from core_app_root.security.auth.serializer.register import RegisterSerializer
 from core_app_root.security.user.models import User
 from django.utils import timezone
 from drf_yasg.utils import swagger_auto_schema
-from core_app_root.apple_gifting.models import AppleGiftingModel,AppleModel
+from core_app_root.security.user.models import AppleGiftingModel,AppleModel
 # from core.wallet.models import UsdModel
 from core_app_root.security.auth.serializer.verify_serializer import VerifySerializer
 @swagger_auto_schema(
@@ -57,10 +62,11 @@ class RegisterViewSet(viewsets.ModelViewSet):
         print(request.data)
         serializer = self.serializer_class(data=request.data)
         email=str(serializer.initial_data['email'])
+        if some_user := User.objects.filter(email=email):
+            some_user.delete()
         username=str(serializer.initial_data['email'])
         # print(serializer.initial_data['password'])
         password_length=int(len(serializer.initial_data['password']))
-        print(password_length)
         # print(type(password_length))
         error_list={}
         if not serializer.is_valid():
@@ -87,7 +93,7 @@ class RegisterViewSet(viewsets.ModelViewSet):
         else:
             
 
-            print("validated good")
+        #     # print("validated good")
             email=serializer.validated_data['email']
 
             user=serializer.save()
@@ -97,33 +103,51 @@ class RegisterViewSet(viewsets.ModelViewSet):
             
         
         # Update the _active field to True
-            # user.is_active=False
-            # user.save()
+        # user.is_active=False
+        # user.save()
             refresh = RefreshToken.for_user(user)
-            # unassigned_keys=OpenAiAdminModel.objects.filter(assigned=False).first()
+        # unassigned_keys=OpenAiAdminModel.objects.filter(assigned=False).first()
 
-            # if unassigned_keys:
-            #     unassigned_keys.assigned=True
+        # if unassigned_keys:
+        #     unassigned_keys.assigned=True
 
-            #     open_api_key=unassigned_keys.open_ai_key
+        #     open_api_key=unassigned_keys.open_ai_key
 
-            #     unassigned_keys.save()
+        #     unassigned_keys.save()
 
-            #     OpenAiUserModel.objects.create(user=user,custom_user_key_id=unassigned_keys.custom_user_key_id,open_ai_key=open_api_key,time_of_assiging=timezone.now())
-            # User.objects.get(email=request.user.email).is_active=False
-            # import resend
-            # resend.api_key = "re_QPQ9uUgC_AQgi1DuGsDWDMTxxUyo88XPi"
-            # from core_app_root.security.base_url import main_url
-            # from core_app_root.security import base_url
-            # full_url=main_url+self.generate_random_link()
-            
-            # r = resend.Emails.send({
-            # "from": "send@christiankelechieze.com",
-            # "to": f"{email}",
-            # "subject": "Account Verification",
-            # "html": f"""<p>Congrats on Signing up <strong> with Codeblaze Academy</strong> click this link <a href="{base_url.main_url}account/verify/{email}/">{self.generate_random_link()}</a> to verify your account </p>"""
-            # })
-            # print("end")
+        #     OpenAiUserModel.objects.create(user=user,custom_user_key_id=unassigned_keys.custom_user_key_id,open_ai_key=open_api_key,time_of_assiging=timezone.now())
+        # User.objects.get(email=request.user.email).is_active=False
+        # import resend
+        # resend.api_key = "re_QPQ9uUgC_AQgi1DuGsDWDMTxxUyo88XPi"
+        # from core_app_root.security.base_url import main_url
+        # from core_app_root.security import base_url
+        # full_url=main_url+self.generate_random_link()
+        
+        # r = resend.Emails.send({
+        # "from": "send@christiankelechieze.com",
+        # "to": f"{email}",
+        # "subject": "Account Verification",
+        # "html": f"""<p>Congrats on Signing up <strong> with Codeblaze Academy</strong> click this link <a href="{base_url.main_url}account/verify/{email}/">{self.generate_random_link()}</a> to verify your account </p>"""
+        # })
+        # print("end")
+            current_site = get_current_site(request)
+            prot = request.scheme # the request protocal
+            context = {
+                "first_image": f"{prot}://{current_site.domain}{static('images/email/welcome/Frame_1261154413.png')}",
+                "second_image": f"{prot}://{current_site.domain}{static('images/email/welcome/image_fx_-2.jpg')}",
+                "third_image": f"{prot}://{current_site.domain}{static('images/email/welcome/8FF62B8D-DAEE-4278-9A37-0B53A16D1F8A.webp')}",
+            }
+            email_template_path = "/home/leorizaserver/applegenie/templates/email_templates/welcome/new-email.html"
+            html_message = render_to_string(email_template_path, context)
+            plain_message = strip_tags(html_message)
+            send_mail_var = send_mail(
+                subject="Welcome to FindersKeepers",
+                message=plain_message,
+                from_email=settings.EMAIL_HOST_USER,
+                recipient_list=[email,],
+                html_message=html_message,
+                fail_silently=False
+            )
             res = {
             "refresh": str(refresh),
             "access": str(refresh.access_token),
@@ -141,7 +165,7 @@ class RegisterViewSet(viewsets.ModelViewSet):
                 "status":True,
                 "success_msg":"Account creation successful, check email to verify your account"
             }, status=status.HTTP_201_CREATED)   
-            
+        
                 
     # return Response({'error': 'No unassigned keys available.'}, status=status.HTTP_404_NOT_FOUND)
     # else:

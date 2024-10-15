@@ -8,7 +8,7 @@ from core_app_root.security.user.models import OnboardingUserDetails, User
 from twilio.rest import Client
 from rest_framework import response
 from rest_framework import status
-from core_app_root.apple_gifting.models import AppleModel
+from core_app_root.security.user.models import AppleModel
 from dotenv import load_dotenv
 import os
 import random

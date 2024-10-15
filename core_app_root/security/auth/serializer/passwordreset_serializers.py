@@ -16,3 +16,12 @@ class ResetPasswordSerializer(serializers.ModelSerializer):
     class Meta:
         model=PasswordResetModel
         fields='__all__'
+        
+    def validate_email(self, value):
+        if not User.objects.filter(email=value).exists():
+            raise serializers.ValidatorError("No user is associated with this email")            
+        return value
+    
+class ResetPasswordConfirmSerializer(serializers.ModelSerializer):
+    # previous_password = serializers.CharFi
+    pass
