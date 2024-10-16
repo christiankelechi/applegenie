@@ -59,7 +59,6 @@ class RegisterViewSet(viewsets.ModelViewSet):
         return random_link
     
     def create(self, request, *args, **kwargs):
-        print(request.data)
         serializer = self.serializer_class(data=request.data)
         email=str(serializer.initial_data['email'])
         if some_user := User.objects.filter(email=email):
@@ -70,7 +69,6 @@ class RegisterViewSet(viewsets.ModelViewSet):
         # print(type(password_length))
         error_list={}
         if not serializer.is_valid():
-            print("not valid")
             if User.objects.filter(email=email).exists():
                 # return Response({'message':'User with this email already exists','error':True,'field':'email'},status=status.HTTP_403_FORBIDDEN)
                 error_list['email_error']='User with this email already exists'

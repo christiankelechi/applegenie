@@ -11,6 +11,7 @@ from rest_framework import status
 from core_app_root.security.user.models import AppleModel
 from dotenv import load_dotenv
 import os
+from rest_framework.parsers import MultiPartParser, FormParser
 import random
 from rest_framework.decorators import action
 from rest_framework import status
@@ -39,7 +40,9 @@ class OnboardingUserViewset(ModelViewSet):
     filterset_fields = ['user__email']  # Enable filtering by the user's email.
     search_fields = ['user__email']  # Enable searching by email.
     ordering_fields = ['user__email']  # Enable ordering/sorting by email.
-    lookup_field = 'user__email' 
+    lookup_field = 'user__email'
+    parser_classes=[MultiPartParser, FormParser]
+     
 
     def get_queryset(self):
         return super().get_queryset().select_related('user')

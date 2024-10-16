@@ -60,12 +60,15 @@ INSTALLED_APPS = [
     "core_app_root.security.auth",
     "core_app_root.image_recognition",
     "core_app_root.image_kyc",
+    "core_app_root.security.settings_and_privacy",
     "channels",
     "core_app_root.calls_management",
     "core_app_root.user_db_communication",
     "background_task",
     "silk",
     "djstripe",  
+    "cloudinary",
+    "cloudinary_storage",
 ]
 
 MIDDLEWARE = [
@@ -194,14 +197,18 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 STATIC_URL = '/static/'
 # STATICFILES_DIRS=[os.path.join(BASE_DIR,'static'),]
+STATIC_ROOT=os.path.join(BASE_DIR,'static')
 # STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL='media/'
-MEDIA_ROOT=os.path.join(BASE_DIR,'media')
+# MEDIA_ROOT=os.path.join(BASE_DIR,'media')
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': os.environ['CLOUD_NAME'],
+    'API_KEY': os.environ['CLOUDINARY_API_KEY'],
+    'API_SECRET': os.environ['CLOUDINARY_API_SECRET'],
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 # STATICFILES_DIRS=[os.path.join(BASE_DIR,'static')]
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
@@ -261,6 +268,9 @@ CELERY_BEAT_SCHEDULE = {
     },
 }
 
+SPECTACULAR_SETTINGS = {
+    'COMPONENT_SPLIT_REQUEST': True
+}
 STRIPE_TEST_PUBLIC_KEY=os.environ['STRIPE_TEST_PUBLIC_KEY']
 STRIPE_TEST_PRIVATE_KEY=os.environ['STRIPE_TEST_SECRET_KEY']
 # STRIPE_WEBHOOK_SECRET=''

@@ -14,3 +14,6 @@ def content_file_name(instance, filename):
 class UserFaceImage(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     image = models.ImageField(upload_to=content_file_name, blank=False)
+
+class AuthenticationMediaFiles(models.Model):
+    file=models.FileField(upload_to="authentication_medias")

@@ -5,7 +5,7 @@ class OnboardingUserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model=OnboardingUserDetails
-        fields=['home_town','education','bio','interests','gender','primary_interest','height','opening_move','dob','values','habits','family_planning','beliefs','communities','name','current_location','language','preference','region']  
+        fields=['photo','home_town','education','bio','interests','gender','primary_interest','height','opening_move','dob','values','habits','family_planning','beliefs','communities','name','current_location','language','preference','region','preferred_quality_in_others']  
 
 # class OTPVerificationSerializer(serializers.Serializer):
 #     phone = serializers.CharField(max_length=15)

@@ -100,7 +100,7 @@ class User(AbstractBaseUser, PermissionsMixin):
 
 class PhoneNumbersModel(models.Model):
     user=models.OneToOneField(User,on_delete=models.CASCADE,related_name='user_phone_numbers',blank=True,null=True)
-    phone = models.CharField(blank=True,null=True)
+    phone=models.CharField(blank=True,null=True)
     code=models.CharField(blank=True,null=True)
     
     
@@ -134,6 +134,7 @@ class AppleModel(models.Model):
 
 class OnboardingUserDetails(models.Model):
     # profile_photo=models.FileField(upload_to='kyc_images',blank=True,null=True)
+    photo=models.FileField(upload_to='user_images',null=True,blank=True)
     home_town=models.TextField(blank=True,null=True)
     education=models.TextField(blank=True,null=True)
     bio=models.TextField(null=True,blank=True) 
@@ -172,6 +173,11 @@ class OnboardingUserDetails(models.Model):
       null=True,blank=True,
     )
     region=models.CharField(max_length=2000,blank=True)
+
+    preferred_quality_in_others=ArrayField(
+        models.CharField(max_length=10000,blank=True,null=True),
+        null=True,blank=True
+    )
     
     
     def __str__(self):
