@@ -1,7 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from django.contrib.postgres.fields import ArrayField
-
+from core_app_root.security.user.models  import User
 # Create your models here.
 class UserAttributes(models.Model):
     GENDER_MALE = 'male'
@@ -55,3 +55,8 @@ class FilterMatches(models.Model):
 
     def __str__(self):
         return "Filtering performed successfuly"
+
+
+class AiSuggestions(models.CharField):
+    user=models.ForeignKey(User,on_delete=models.CASCADE,null=True,blank=True)
+    compatibilty_trait=models.TextField()

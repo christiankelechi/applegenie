@@ -13,6 +13,8 @@ from django.core.exceptions import ObjectDoesNotExist
 # Create your models here.
 import hashlib
 from django.contrib.postgres.fields import ArrayField
+
+
 # from core_app_root.apple_gifting.models import AppleModel
 
 class UserManager(BaseUserManager):
@@ -78,7 +80,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     REQUIRED_FIELDS = ['username']
     face_encoding = models.BinaryField(blank=True, null=True)
     objects = UserManager()
-
+   
     def __str__(self):
         return f"{self.email}"
     def save(self, *args, **kwargs):
@@ -119,6 +121,44 @@ class AppleGiftingModel(models.Model):
     def __str__(self):
         return f"{self.sender} sent total of {self.number_of_apples} apples to {self.reciever}"
 
+class AppleRecievedNotificationDashboard(models.Model):
+    amount_sent=models.IntegerField(default=0,null=True,blank=True)
+    receiver_email=models.EmailField(null=True,blank=True)
+    sender_email=models.EmailField(null=True,blank=True)
+    days_left=models.TextField(null=True,blank=True)
+    apple_message_alert=models.TextField(null=True,blank=True)
+    location_of_the_gifter=models.TextField(null=True,blank=True)
+    interests_of_the_sender=models.TextField(null=True,blank=True)
+    education_level_of_sender=models.TextField(null=True,blank=True)
+    family_planning_of_sender=models.TextField(null=True,blank=True)
+    beliefs=models.TextField(null=True,blank=True)
+    accept_button=models.BooleanField(default=False,null=True,blank=True)
+    reject_button=models.BooleanField(default=False,null=True,blank=True)
+
+class AppleSentDashbaord(models.Model):
+    amount_sent=models.IntegerField(default=0,null=True,blank=True)
+    receiver_email=models.EmailField(blank=True,null=True)
+    sender_email=models.EmailField(blank=True,null=True)
+    days_left=models.TextField(null=True,blank=True)
+    apple_message_alert=models.TextField(null=True,blank=True)
+    location_of_the_reciever=models.TextField(null=True,blank=True)
+    interests_of_the_reciever=models.TextField(null=True,blank=True)
+    education_level_of_reciever=models.TextField(null=True,blank=True)
+    family_planning_of_reciever=models.TextField(null=True,blank=True)
+    beliefs=models.TextField(null=True,blank=True)
+    accept_button=models.BooleanField(default=False,null=True,blank=True)
+    reject_button=models.BooleanField(default=False,null=True,blank=True)
+
+class BookMarkDashboard(models.Model):
+    email_of_user_bookmarked=models.EmailField(unique=True,blank=True,null=True)
+    name_of_user_bookmarked=models.TextField()
+    profile_picture=models.TextField()
+    location=models.TextField()
+    interests=models.TextField()
+ # Returns the username of the associated User
+
+
+
 class AppleModel(models.Model):
     user=models.OneToOneField(User,on_delete=models.CASCADE)
     rotting_apples=models.FloatField(default=0,null=True)
@@ -134,6 +174,7 @@ class AppleModel(models.Model):
 
 class OnboardingUserDetails(models.Model):
     # profile_photo=models.FileField(upload_to='kyc_images',blank=True,null=True)
+    age=models.CharField(null=True,blank=True)
     photo=models.FileField(upload_to='user_images',null=True,blank=True)
     home_town=models.TextField(blank=True,null=True)
     education=models.TextField(blank=True,null=True)
@@ -179,9 +220,52 @@ class OnboardingUserDetails(models.Model):
         null=True,blank=True
     )
     
-    
+ 
+  
+    current_age = models.IntegerField(null=True, blank=True)  # Store age as an integer in years
+
+    # Method to calculate age from date of birth
+    def calculate_age(self):
+        if self.dob:
+            today = date.today()
+            years = today.year - self.dob.year
+
+            # Adjust if today's date is before the birthday in the current year
+            if (today.month, today.day) < (self.dob.month, self.dob.day):
+                years -= 1
+
+            # Format the age as 'years-months-days'
+            self.age = f"{years} years"
+            self.current_age = years
+        else:
+            self.age = "DOB not provided"
+            self.current_age = None
+        
+        # Save the updated age
+        self.save()
+
     def __str__(self):
         return f"{self.user} have completed onboarding stage"
+    
+    # def __str__(self):
+    #     return f"{self.user} have completed onboarding stage"
+
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    bio = models.TextField(blank=True, null=True)  
+    profile_picture = models.ImageField(upload_to='profile/', blank=True, null=True)  
+    phone_number = models.CharField(max_length=15, blank=True, null=True) 
+    onboarding_details=models.OneToOneField(OnboardingUserDetails,on_delete=models.CASCADE)
+    strengths=models.TextField(null=True,blank=True)
+    weaknesses=models.TextField(null=True,blank=True)
+    suggestions_user_emails=ArrayField(
+        models.EmailField(null=True,blank=True),
+        null=True,blank=True
+    )
+
+    def __str__(self):
+        return self.user.username 
+
 
 
 class PurchaseLog(models.Model):
@@ -191,7 +275,13 @@ class PurchaseLog(models.Model):
         return f"Purchase Logs: {self.apple_purchase_logs}"
         
 class UserProfileSummary(models.Model):
-    user_onboarding_details=models.ForeignKey(OnboardingUserDetails,on_delete=models.CASCADE)
-    user_auth_details=models.ForeignKey(User,on_delete=models.CASCADE)
-    phone_number_detail=models.ForeignKey(PhoneNumbersModel,on_delete=models.CASCADE)
-    apple_details=models.ForeignKey(AppleModel,on_delete=models.CASCADE)
+    interested_in=models.TextField(null=True,blank=True)
+    language=models.TextField(null=True,blank=True)
+    age_range=models.TextField(null=True,blank=True)
+    amount_of_apple_range=models.TextField(null=True,blank=True)
+    travel_mode_on=models.BooleanField(default=False,blank=True,null=True)
+    distance_range=models.TextField(null=True,blank=True,)
+    interests=models.TextField(null=True,blank=True)
+
+
+

@@ -22,6 +22,7 @@ router.register(r'otp_resend', ResendOtpViewset, basename='otp_resend')
 
 
 router.register(r'otp_confirmation', OtpVerficationViewset, basename='otp_confirmation')
+router.register(r'filter_users', UserProfileSummaryViewset, basename='filter_users')
 
 
 # urlpatterns = [

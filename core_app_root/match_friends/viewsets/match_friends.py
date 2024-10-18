@@ -4,8 +4,8 @@ from rest_framework import status
 from rest_framework.response import Response
 from core_app_root.match_friends.viewsets.fetchinterests import fetch_human_interests
 import os
-from core_app_root.human_attributes.models import HumanInterests
-from core_app_root.human_attributes.serializers.human_attributes import HumanInterestSerializer
+
+
 # class Interests(viewsets.ModelViewSet):
 import asyncio
 import requests
@@ -76,28 +76,6 @@ model = SentenceTransformer('distilbert-base-nli-stsb-mean-tokens')
 # except FileNotFoundError as e:
 #     print(e)
 
-
-class HumanInterestsViewsets(viewsets.ViewSet):
-    serializer_class=HumanInterestSerializer
-
-    def list(self,request):
-        file_path = os.path.join(os.getcwd(),'core_app_root/match_friends/viewsets/interests.json')
-        interests = fetch_human_interests(file_path)
-        print(interests)
-        return Response({"status":True,"message":"List of interests fetched successfully","data":interests})
-    
-    def create(self,request):
-        
-        serializer=self.serializer_class(data=request.data)
-        if serializer_class.is_valid():
-            file_path=os.path.join(os.getcwd(),'core_app_root/match_friends/viewsets/interests.json')
-            interest=fetch_human_interests(file_path)
-            
-            if HumanInterests.objects.get(user=request.user).DoesNotExist:
-                user_inerests=serializer.save()
-                
-            return Response({"status":True,"message":"User Interests successfuly "})
-    
 
 class MatchFriendsViewsets(viewsets.ModelViewSet):
     

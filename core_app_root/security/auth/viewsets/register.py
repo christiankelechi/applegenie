@@ -1,6 +1,7 @@
 import django.contrib
 from django.conf import settings
 from core_app_root.security import base_url
+from core_app_root.security.settings_and_privacy.models import MatchPreferenceModel, CausesModel, QualitiesValueModel, SettingPrivacyModel
 from django.shortcuts import redirect
 from rest_framework import viewsets
 from rest_framework.decorators import action
@@ -95,6 +96,13 @@ class RegisterViewSet(viewsets.ModelViewSet):
             email=serializer.validated_data['email']
 
             user=serializer.save()
+            
+            # initializing the settings
+            # Setting setup
+            setting = SettingPrivacyModel.objects.create(user=user)
+            MatchPreferenceModel.objects.create(setting=setting)
+            CausesModel.objects.create(user=user)
+            QualitiesValueModel.objects.create(user=user)
 
             # fullname=str(serializer.validated_data['first_name'])+", "+str(serializer.validated_data['last_name'])
             # return render(request,'account/register_done.html',{'fullname':fullname})

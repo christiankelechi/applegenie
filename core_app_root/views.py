@@ -20,6 +20,9 @@ from core_app_root import base_url
 import stripe
 from django.views.decorators.http import require_POST
 
+from django.conf import settings
+stripe.api_key = settings.STRIPE_TEST_PRIVATE_KEY
+
 @login_required
 @require_POST
 def create_portal_session(request):

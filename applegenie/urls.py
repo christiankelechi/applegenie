@@ -24,6 +24,8 @@ from drf_yasg import openapi
 from rest_framework import permissions
 from django.urls import path,re_path,include
 from core_app_root import views
+from core_app_root.subscription.views import CheckoutView,StripeIntentView
+
 schema_view = get_schema_view(
    openapi.Info(
       title="Apple Genie Api",
@@ -47,6 +49,7 @@ urlpatterns = [
     # path(f"<str:room_name>/", views.room, name="room"),
     # path("chat/", views.chat, name="chat"),
     path('',include(('core_app_root.security.auth.routers','core_app_root.security.auth'))),
+    path('',include(('core_app_root.security.settings_and_privacy.routers','core_app_root.security.settings_and_privacy'))),
     path('',include(('core_app_root.security.user.routers','core_app_root.security.user'))),
     path('',include(('core_app_root.apple_gifting.routers','core_app_root.apple_gifting'))),
     path('',include(('core_app_root.match_friends.routers','core_app_root.match_friends'))),
@@ -55,12 +58,17 @@ urlpatterns = [
     path('',include('core_app_root.chat_management.urls')),
     path('',include('core_app_root.match_friends.urls')),
     path('image_recognition/',include(('core_app_root.image_recognition.routers','core_app_root.image_recognition'))),
-    
+    path('',include(('core_app_root.subscription.routers','core_app_root.subscription'))),
+    path('home/',include(('core_app_root.home_management.routers','core_app_root.home_management'))),
+
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
     path('silk/',include('silk.urls',namespace='silk')),
     path("pricing-page/", views.pricing_page, name="pricing_page"),
     path("subscription-confirm/", views.subscription_confirm, name="subscription_confirm"),
-    path('stripe/', include('djstripe.urls', namespace='djstripe')),
+    path("stripe/", include("djstripe.urls", namespace="djstripe")),
+    path('checkout/', CheckoutView.as_view(), name='checkout'),
+    path('create_subscription/<pk>/', StripeIntentView.as_view(), name='create_subscription'),
+    # path("profile/", views.profile, name="profile"), # add this #
     
 ]
 if settings.DEBUG:

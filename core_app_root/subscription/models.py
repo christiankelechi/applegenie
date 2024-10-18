@@ -2,17 +2,6 @@ from django.db import models
 
 # Create your models here.
 class Subscription(models.Model):
-    pass
-class StripeSubscription(models.Model):
-    start_date = models.DateTimeField(help_text="The start date of the subscription.")
-    status = models.CharField(max_length=20, help_text="The status of this subscription.")
-    # other data we need about the Subscription from Stripe goes here 
-
-
-class MyStripeModel(models.Model):
-    name = models.CharField(max_length=100)
-    stripe_subscription = models.ForeignKey(StripeSubscription, on_delete=models.SET_NULL)
-
-class MyStripeModel(models.Model):
-    name = models.CharField(max_length=100)
-    stripe_subscription_id = models.CharField(max_length=100)
+    click_subscription=models.BooleanField(default=False,null=True,blank=True)
+    
+    

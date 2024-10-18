@@ -95,3 +95,7 @@ class UserHistory(models.Model):
     
     def __str__(self):
         return f"Total user summary updated successfully"
+
+class AnalyseChat(models.Model):
+    user_email=models.EmailField(null=True,blank=True)
+    
